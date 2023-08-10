@@ -1,11 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {Routes, BrowserRouter, Link, Route} from 'react-router-dom'
+import {Routes, BrowserRouter, Link, Route} from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
       <BrowserRouter>
+	  	<Navbar />
           <ul>
             <li>
               <Link to="/">Home</Link>

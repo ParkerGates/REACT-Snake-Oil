@@ -1,0 +1,8 @@
+.nav_cont {
+    display: flex;
+    border: 2px solid red;
+}
+
+.nav_left_sec, .nav_mid_sec, .nav_right_sec {
+    border: 1px solid hsla(0, 0%, 0%, 0.60)
+}
