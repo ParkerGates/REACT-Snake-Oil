@@ -9,7 +9,7 @@
     height: 3rem;
 }
 .nav_left_sec {
-    width: 12rem;
+    width: 11rem;
     background-color: #161616;
 }
 .nav_mid_sec {
@@ -24,7 +24,11 @@
     font-size: 1.4rem;
 }
 .nav_right_sec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 3.5rem;
+    overflow: hidden;
 }
 
 /*Nav-Items=============================================================================*/
@@ -33,4 +37,12 @@
     margin: auto auto auto .8rem;
     color: hsla(0, 0%, 0%, 0.7);
     text-decoration: none;
+}
+
+.nav_asp_logo {
+    position: absolute;
+    top: .1rem;
+    left: -5.2rem;
+    height: 2.9rem;
+
 }

@@ -1,0 +1,20 @@
+<svg width="1728" height="1117" viewBox="0 0 1728 1117" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="1117" width="1117" height="1728" transform="rotate(-90 0 1117)" fill="url(#paint0_linear_25_7)"/>
+<rect width="1728" height="1117" fill="url(#paint1_linear_25_7)"/>
+<defs>
+<linearGradient id="paint0_linear_25_7" x1="872.01" y1="1341.66" x2="4.06647" y2="1584.26" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E3EBFA" stop-opacity="0.6"/>
+<stop offset="0.206093" stop-color="#EAF9FA" stop-opacity="0.68"/>
+<stop offset="0.402241" stop-color="#FEF8E9" stop-opacity="0.66"/>
+<stop offset="0.809858" stop-color="#EAFCFD" stop-opacity="0.66"/>
+<stop offset="1" stop-color="#FCFCFE" stop-opacity="0.71"/>
+</linearGradient>
+<linearGradient id="paint1_linear_25_7" x1="1349" y1="145.221" x2="348.905" y2="814.22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D8E4FA"/>
+<stop offset="0.206093" stop-color="#EAF9FA"/>
+<stop offset="0.402241" stop-color="#FEF8E9"/>
+<stop offset="0.809858" stop-color="#EAFCFD"/>
+<stop offset="1" stop-color="#FCFCFE"/>
+</linearGradient>
+</defs>
+</svg>

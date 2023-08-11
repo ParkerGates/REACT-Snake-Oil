@@ -1,13 +1,15 @@
 import react from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { ShoppingCartOutlined }  from '@mui/icons-material';
 import './Navbar.css';
+import AspLogo from '../../svgs/AspLogo.svg';
 
 function NavBar() {
 
     return(
         <div className='nav_cont'>
             <div className='nav_left_sec'>
-                <span>Asp</span>
+                <img src={AspLogo} alt='asp logo' className='nav_asp_logo' />
             </div>
             <div className='nav_mid_sec'>
                 <div>
@@ -17,7 +19,7 @@ function NavBar() {
                 </div>
             </div>
             <div className='nav_right_sec'>
-                <span>Cart</span>
+                <ShoppingCartOutlined fontSize='large' sx={{color:'hsla(0, 0%, 0%, 0.7);', height:'1.8rem'}} />
             </div>
         </div>
     );
