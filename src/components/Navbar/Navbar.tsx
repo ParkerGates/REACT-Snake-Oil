@@ -11,9 +11,9 @@ function NavBar() {
             </div>
             <div className='nav_mid_sec'>
                 <div>
-                    <span>Home</span>
-                    <span>About</span>
-                    <span>Shop</span>
+                    <NavLink to="/" className='nav_item'>Home</NavLink>
+                    <NavLink to="/about" className='nav_item'>About</NavLink>
+                    <NavLink to="/shop" className='nav_item'>Shop</NavLink>
                 </div>
             </div>
             <div className='nav_right_sec'>

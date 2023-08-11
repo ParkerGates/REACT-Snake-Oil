@@ -1,56 +1,21 @@
 import './App.css';
 import {Routes, BrowserRouter, Link, Route} from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
+import Home from './views/Home';
+import About from './views/About';
+import Shop from './views/Shop';
 
-function App() {
+export default function App() {
   return (
       <BrowserRouter>
 	  	<Navbar />
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/yep">Yep</Link>
-            </li>
-          </ul>
-
           <div>
             <Routes>
               <Route path="/" element={<Home />} />
 			  <Route path="/about" element={<About />} />
-			  <Route path="/yep" element={<Yep />} />
+			  <Route path="/shop" element={<Shop />} />
             </Routes>
           </div>
       </BrowserRouter>
   );
 }
-
-function Home() {
-  return (
-    <div>
-      <h1>Home</h1>
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h1>About</h1>
-    </div>
-  );
-}
-
-function Yep() {
-  return (
-    <div>
-      <h1>Yep</h1>
-    </div>
-  );
-}
-
-export default App;

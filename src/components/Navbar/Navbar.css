@@ -1,8 +1,36 @@
 .nav_cont {
     display: flex;
-    border: 2px solid red;
 }
 
+
+/*Nav-Sections==========================================================================*/
 .nav_left_sec, .nav_mid_sec, .nav_right_sec {
-    border: 1px solid hsla(0, 0%, 0%, 0.60)
+    border: 1px solid hsla(0, 0%, 0%, 0.50);
+    height: 3rem;
+}
+.nav_left_sec {
+    width: 12rem;
+    background-color: #161616;
+}
+.nav_mid_sec {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    border-left: none;
+    border-right: none;
+
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+.nav_right_sec {
+    width: 3.5rem;
+}
+
+/*Nav-Items=============================================================================*/
+.nav_item {
+    position: relative; bottom: 1px;
+    margin: auto auto auto .8rem;
+    color: hsla(0, 0%, 0%, 0.7);
+    text-decoration: none;
 }
