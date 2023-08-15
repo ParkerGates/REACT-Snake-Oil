@@ -3,13 +3,14 @@
 }
 
 
-/*Nav-Sections==========================================================================*/
+/*Nav===================================================================================*/
 .nav_left_sec, .nav_mid_sec, .nav_right_sec {
     border: 1px solid hsla(0, 0%, 0%, 0.50);
     height: 3rem;
 }
 .nav_left_sec {
-    width: 11rem;
+    width: 9.5rem;
+    min-width: 9.5rem;
     background-color: #161616;
 }
 .nav_mid_sec {
@@ -27,9 +28,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 3.5rem;
+    width: 3rem;
+    min-width: 3rem;
     overflow: hidden;
 }
+
 
 /*Nav-Items=============================================================================*/
 .nav_item {
@@ -38,11 +41,108 @@
     color: hsla(0, 0%, 0%, 0.7);
     text-decoration: none;
 }
+.nav_item_mobile {
+    display: block;
+    height: 2.6rem;
+    padding: .5rem .5rem 0rem;
+
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-decoration: none;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
 
 .nav_asp_logo {
     position: absolute;
     top: .1rem;
     left: -5.2rem;
     height: 2.9rem;
+}
+.nav_menu { display: none; }
+.nav_cart {}
+.nav_cart_side_nav {
+    display: inline-block;
+    position: relative;
+    left: 2px;
+    margin-top:1px;
+}
 
+
+/*Side-Nav==============================================================================*/
+.side_nav_cont {}
+.side_nav_left { display: none; }
+.side_nav_right { display: none; }
+.side_nav_background {
+    display: none;
+    position: fixed;
+    background-color: rgba(105, 105, 105, 0.0);
+    height: 100vh;
+    width: 100vw;
+    left: 0px; bottom: 0px;
+    z-index: 9;
+}
+
+
+/*Mobile=================================================================================*/
+@media screen and (max-width: 700px) {
+    .nav_item {
+        display: none;
+    }
+    .nav_left_sec {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        min-width: 3rem;
+        background-color: transparent;
+    }
+    .nav_asp_logo { display: none; }
+    .nav_menu {
+        display: inline-block;
+        position: relative;
+        right: 2px; top: 1px;
+    }
+
+    .side_nav_left {
+        display: inline-block;
+        position: fixed;
+        bottom: 0px; left: -13.5rem;
+        height: 100vh; width: 13.4rem;
+    
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        border-top: none;
+        transition: left .5s; 
+    
+        background-image: url(../../svgs/Background.svg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    
+    }
+    .side_nav_left_open { left: 0rem; right: 0rem; z-index: 10;}
+
+    .side_nav_right {
+        display: inline-block;
+        position: fixed;
+        bottom: 0rem; right: -13.5rem;
+        height: 100vh; width: 13.4em;
+    
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        border-top: none;
+        background-color: rgba(255, 255, 255, 0.4);
+        transition: right .5s;
+
+        background-image: url(../../svgs/Background.svg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .side_nav_right_open { right: 0rem; z-index: 10;}
+
+    .side_nav_background_open {
+        display: block;
+        background-color: rgba(105, 105, 105, 0.6);
+    }
 }

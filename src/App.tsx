@@ -6,16 +6,15 @@ import About from './views/About';
 import Shop from './views/Shop';
 
 export default function App() {
+
   return (
-      <BrowserRouter>
-	  	<Navbar />
-          <div>
-            <Routes>
-              <Route path="/" element={<Home />} />
-			  <Route path="/about" element={<About />} />
-			  <Route path="/shop" element={<Shop />} />
-            </Routes>
-          </div>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/shop" element={<Shop />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

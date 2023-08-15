@@ -1,4 +1,23 @@
+:root {
+  --text-color:rgb(74, 74, 74);
+}
+
+
 body {
   font-family: 'Roboto';
   color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.empty_btn {
+  border: none;
+  background-color: transparent;
+  outline: transparent;
+  margin: 0px;
+  padding: 0px;
+}
+
+.align_right {
+  text-align: right;
 }
