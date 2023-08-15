@@ -1,0 +1,32 @@
+.hm_heading {
+    position: relative;
+    height: 35rem;
+    background: linear-gradient(to top right, rgb(20, 20, 20) 0%, rgb(39, 39, 39) 50%, rgb(20, 20, 20) 95%);
+    overflow: hidden;
+}
+.hm_heading_grid1 {
+    position: absolute;
+    top: -3rem; left: -5.2rem;
+    width: 140rem;
+}
+.hm_heading_grid2 {
+    position: absolute;
+    top: -4rem; left: -10rem;
+    width: 145rem;
+    height: 107rem;
+}
+.hm_heading_logo {
+    position: absolute;
+    z-index: 1;
+    height: 18rem;
+    left: -20rem;
+}
+.hm_heading_snake {
+    position: absolute;
+    z-index: 1;
+    height: 45rem;
+    right: -12rem;
+    bottom: -15rem;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
