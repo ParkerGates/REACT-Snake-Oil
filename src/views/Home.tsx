@@ -16,12 +16,26 @@ export default function Home() {
                 <img src={Grid2} className='hm_heading_grid2' alt="grid" />
                 <img src={GreenSnake} className="hm_heading_snake" alt="green snake" />
             </div>
-
-
-
-
+            <div className="hm_scroll">
+                <hr />
+                <div>
+                    <span>SNAKE OIL</span><span>MIRACLE CURES</span><span>SNAKE OIL</span><span>MIRACLE CURES</span>
+                    <span>SNAKE OIL</span><span>MIRACLE CURES</span><span>SNAKE OIL</span><span>MIRACLE CURES</span>
+                    <span>SNAKE OIL</span><span>MIRACLE CURES</span><span>SNAKE OIL</span><span>MIRACLE CURES</span>
+                    <span>SNAKE OIL</span><span>MIRACLE CURES</span>
+                </div>
+                <div>
+                    <span>SNAKE OIL</span><span>MIRACLE CURES</span><span>SNAKE OIL</span><span>MIRACLE CURES</span>
+                    <span>SNAKE OIL</span><span>MIRACLE CURES</span><span>SNAKE OIL</span><span>MIRACLE CURES</span>
+                    <span>SNAKE OIL</span><span>MIRACLE CURES</span><span>SNAKE OIL</span><span>MIRACLE CURES</span>
+                    <span>SNAKE OIL</span><span>MIRACLE CURES</span>
+                </div>
+                <hr />
+            </div>
 
             <div className='hm_call2action'>
+                
+
 
             </div>
             <div className='hm_options'>

@@ -1,6 +1,7 @@
+/*Heading===========================================================================*/
 .hm_heading {
     position: relative;
-    height: 35rem;
+    height: 28rem;
     background: linear-gradient(to top right, rgb(20, 20, 20) 0%, rgb(39, 39, 39) 50%, rgb(20, 20, 20) 95%);
     overflow: hidden;
 }
@@ -17,16 +18,65 @@
 }
 .hm_heading_logo {
     position: absolute;
-    z-index: 1;
-    height: 18rem;
     left: -20rem;
+    height: 18rem;
+    z-index: 1;
 }
 .hm_heading_snake {
     position: absolute;
-    z-index: 1;
-    height: 45rem;
-    right: -12rem;
+    right: -8rem;
     bottom: -15rem;
+    height: 40rem;
+    z-index: 1;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
+.hm_scroll {
+    position: relative;
+    width: 100%;
+    min-width: 2000px;
+    padding: .5rem 0rem .2rem;
+    background-color: #282828;
+}
+.hm_scroll div {
+    position: absolute;
+    top: .5rem;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    animation: scroll1 55s linear infinite;
+}
+.hm_scroll div:nth-child(2) { animation: scroll2 55s linear infinite; }
+.hm_scroll div span {
+    color: #464646;
+    font-size: 1.1rem;
+    font-weight: 500;
+    animation: glow 5s linear infinite;
+}
+.hm_scroll hr {
+    position: relative;
+    top: -.2rem;
+    height: 1px;
+    padding: 0px;
+    margin: 0px;
+    color: #343434;
+    background-color: #343434;
+}
+.hm_scroll hr:last-child { margin-top: 1.3rem;}
+
+@keyframes scroll1 {
+    0% { transform: translateX(100%) }
+    100% { transform: translateX(0%) }
+}
+@keyframes scroll2 {
+    0% { transform: translateX(0%) }
+    100% { transform: translateX(-100%) }
+}
+@keyframes glow {
+    0% { color: #464646; }
+    50% { color: #616161; }
+    100% { color: #464646; }
+}
+
+/*Call-To-Action====================================================================*/
