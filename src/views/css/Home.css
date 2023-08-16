@@ -118,7 +118,7 @@
     bottom: 0px;
     height: 2px;
     width: 200px;
-    background-color: #878887;
+    background-color: #c2c2c2;
 }
 .hm_call2action_divider1 { left: 0px; }
 .hm_call2action_divider2 { right: 0px; }
@@ -136,11 +136,52 @@
 
 /*Options===========================================================================*/
 .hm_options {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 12rem 0rem 12rem;
+    overflow: hidden;
 }
-.hm_option_icon_cont {
-
+.hm_options div { position: relative; }
+.hm_options_icon_cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -1.8rem;
+    left: 5.6rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    z-index: 1;
+    border: 3px solid #202020;
+    border-radius: 100px;
+    background-color: white;
 }
 .hm_options_btn {
-    
+    display: inline-block;
+    width: 15rem;
+    height: 9.5rem;
+
+    color: white;
+    background-color: #202020;
+
+    text-align: center;
+    line-height: 9.5rem;
+    font-size: 2rem;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 70px;
 }
+.hm_options_color {
+    position: absolute;
+    right: -50rem;
+    width: 180rem;
+    height: 9.2rem;
+    transform: rotate(8deg);
+    transform-origin: 69% 50%;
+    z-index: -1;
+}
+
+
+/*Popular===========================================================================*/
