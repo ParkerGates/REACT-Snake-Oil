@@ -1,8 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import Grid1 from '../svgs/grid1.svg';
 import Grid2 from '../svgs/grid2.svg';
 import AspLogo from '../svgs/AspLogoLarge.svg';
 import GreenSnake from '../images/greenSnake.png';
+import HomeEllipseLeft from '../svgs/HomeEllipseLeft.svg';
+import HomeEllipseRight from '../svgs/HomeEllipseRight.svg';
 
 import './css/Home.css';
 
@@ -34,8 +37,15 @@ export default function Home() {
             </div>
 
             <div className='hm_call2action'>
-                
+                <h1>Honest To God Miracle Cures</h1>
+                <h2>100% guaranteed to cure all ailments and illnesses</h2>
+                <h2>Being sick is a choice, choose Asp instead</h2>
+                <NavLink to='/shop'><button>Shop Now</button></NavLink>
 
+                <div className="hm_call2action_divider1"></div>
+                <div className="hm_call2action_divider2"></div>
+                <img className="hm_ellipse_1" src={HomeEllipseLeft} alt="ellipse" />
+                <img className="hm_ellipse_2" src={HomeEllipseRight} alt="ellipse" />
 
             </div>
             <div className='hm_options'>
