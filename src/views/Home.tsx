@@ -9,9 +9,7 @@ import HomeEllipseRight from '../svgs/HomeEllipseRight.svg';
 import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
-
-
-
+import Colors from '../svgs/colors.svg';
 import './css/Home.css';
 
 export default function Home() {
@@ -55,21 +53,18 @@ export default function Home() {
 
             <div className='hm_options'>
                 <div>
-                    <span className='hm_option_icon_cont'><HandshakeOutlinedIcon /></span>
+                    <span className='hm_options_icon_cont'><HandshakeOutlinedIcon fontSize='large' sx={{color:'#202020', height:'2.2rem'}}/></span>
                     <NavLink className='hm_options_btn' to="/about">About</NavLink>
                 </div>
                 <div>
-                    <span className='hm_option_icon_cont'><InfoOutlinedIcon/></span>
+                    <span className='hm_options_icon_cont'><InfoOutlinedIcon fontSize='large' sx={{color:'#202020', height:'2.2rem', marginBottom:"2px"}}/></span>
                     <a className='hm_options_btn' href="">Testimonials</a>
                 </div>
                 <div>
-                    <span className='hm_option_icon_cont'><AttachMoneyOutlinedIcon/></span>
+                    <span className='hm_options_icon_cont'><AttachMoneyOutlinedIcon fontSize='large' sx={{color:'#202020', height:'2.2rem', margin:"0px 0px 2px 2px"}}/></span>
                     <a className='hm_options_btn' href="">Sales</a>
+                    <img className='hm_options_color' src={Colors} alt='colors' />
                 </div>
-
-
-
-
             </div>
 
             <div className="hm_popular">
