@@ -39,6 +39,7 @@ export default function Home() {
                 <hr />
             </div>
 
+
             <div className='hm_call2action'>
                 <h1>Honest To God Miracle Cures</h1>
                 <h2>100% guaranteed to cure all ailments and illnesses</h2>
@@ -50,6 +51,7 @@ export default function Home() {
                 <img className="hm_ellipse_1" src={HomeEllipseLeft} alt="ellipse" />
                 <img className="hm_ellipse_2" src={HomeEllipseRight} alt="ellipse" />
             </div>
+
 
             <div className='hm_options'>
                 <div>
@@ -67,7 +69,34 @@ export default function Home() {
                 </div>
             </div>
 
+
             <div className="hm_popular">
+                <div className="hm_item_heading_top">
+                    <div className='hm_item_heading_hr'></div>
+                    <div className="hm_item_heading_top_text">
+                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
+                        <h3>POPULAR ITEMS</h3>
+                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
+                    </div>
+                    <div className='hm_item_heading_hr'></div>
+                </div>
+                <div className='hm_item_display'>
+                    <NavLink to='/shop'>Hehe</NavLink>
+                    <NavLink to='/shop'>Hehe</NavLink>
+                    <NavLink to='/shop'>Hehe</NavLink>
+                </div>
+                <div className="hm_item_heading_top">
+                    <div className='hm_item_heading_hr'></div>
+                    <div className="hm_item_heading_top_text hm_item_heading_bottom_text">
+                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
+                        <h3>POPULAR ITEMS</h3>
+                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
+                    </div>
+                    <div className='hm_item_heading_hr'></div>
+                </div>
+
+
+
 
             </div>
             <div className='hm_testimonials'>
