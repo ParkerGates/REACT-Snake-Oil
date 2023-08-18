@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import DisplayItemCard from '../components/DisplayItemCard/DisplayItemCard';
+import Testimonials from '../components/Testimonials/Testimonials';
 import Grid1 from '../svgs/grid1.svg';
 import Grid2 from '../svgs/grid2.svg';
 import AspLogo from '../svgs/AspLogoLarge.svg';
@@ -8,6 +9,9 @@ import GreenSnake from '../images/designImages/greenSnake.png';
 import Drop1 from '../images/itemImages/drop1.jpg';
 import Drop2 from '../images/itemImages/drop2.jpg';
 import Cream1 from '../images/itemImages/cream1.jpg';
+import Man1 from '../images/testimonials/man1.jpg';
+import Man2 from '../images/testimonials/man2.jpg';
+import Man3 from '../images/testimonials/man3.jpg';
 import HomeEllipseLeft from '../svgs/HomeEllipseLeft.svg';
 import HomeEllipseRight from '../svgs/HomeEllipseRight.svg';
 import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined';
@@ -84,6 +88,7 @@ export default function Home() {
                     </div>
                     <div className='hm_item_heading_hr'></div>
                 </div>
+
                 <div className='hm_item_display'>
                     <NavLink to='/shop' className='text_dec_none'>
                         <DisplayItemCard imageName={Drop1} itemName='Third Eye Drops' price='79.99'/>
@@ -94,17 +99,8 @@ export default function Home() {
                     <NavLink to='/shop' className='text_dec_none'>
                         <DisplayItemCard imageName={Drop2} itemName='Covid Cure' price='64.99'/>
                     </NavLink>
-
-
-
-
-
-
-
-
-
-
                 </div>
+
                 <div className="hm_item_heading_top">
                     <div className='hm_item_heading_hr'></div>
                     <div className="hm_item_heading_top_text hm_item_heading_bottom_text">
@@ -114,15 +110,39 @@ export default function Home() {
                     </div>
                     <div className='hm_item_heading_hr'></div>
                 </div>
-
-
-
-
             </div>
+
+
             <div className='hm_testimonials'>
+                <h2>Testimonials</h2>
+                <div className="hm_testimonial_sub_heading">
+                    <img src={Colors} alt="colors" />
+                    <div>hear from our happy customers</div>
+                </div>
 
+                <Testimonials image={Man1} name="Joe King" location="Chicago Illinois">
+                    Asp oils have allowed me to live a better, healthier, pain free life. I can't imagine living without these miracle products
+                </Testimonials>
+
+                <Testimonials image={Man2} name="Amy Stake" location="Toronto Ontario">
+                    I was born blind. Through consistent use of Asps FDA compliant products, my vison was completely restored. A modern miracle
+                </Testimonials>
+
+                <Testimonials image={Man3} name="Noah Pinion" location="Sacramento California">
+                    Asp products cured my cancer instantly. I had a cut on my arm that closed in 5 seconds. Truly you should give them money
+                </Testimonials>
             </div>
+
+
             <div className="hm_sales">
+
+
+
+
+
+
+
+
 
             </div>
             <footer className='hm_footer'>
