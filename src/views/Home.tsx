@@ -1,9 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import DisplayItemCard from '../components/DisplayItemCard/DisplayItemCard';
 import Grid1 from '../svgs/grid1.svg';
 import Grid2 from '../svgs/grid2.svg';
 import AspLogo from '../svgs/AspLogoLarge.svg';
-import GreenSnake from '../images/greenSnake.png';
+import GreenSnake from '../images/designImages/greenSnake.png';
+import Drop1 from '../images/itemImages/drop1.jpg';
+import Drop2 from '../images/itemImages/drop2.jpg';
+import Cream1 from '../images/itemImages/cream1.jpg';
 import HomeEllipseLeft from '../svgs/HomeEllipseLeft.svg';
 import HomeEllipseRight from '../svgs/HomeEllipseRight.svg';
 import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined';
@@ -81,9 +85,25 @@ export default function Home() {
                     <div className='hm_item_heading_hr'></div>
                 </div>
                 <div className='hm_item_display'>
-                    <NavLink to='/shop'>Hehe</NavLink>
-                    <NavLink to='/shop'>Hehe</NavLink>
-                    <NavLink to='/shop'>Hehe</NavLink>
+                    <NavLink to='/shop' className='text_dec_none'>
+                        <DisplayItemCard imageName={Drop1} itemName='Third Eye Drops' price='79.99'/>
+                    </NavLink>
+                    <NavLink to='/shop' className='text_dec_none'>
+                        <DisplayItemCard imageName={Cream1} itemName='Quick Heal Rub' price='54.99'/>
+                    </NavLink>
+                    <NavLink to='/shop' className='text_dec_none'>
+                        <DisplayItemCard imageName={Drop2} itemName='Covid Cure' price='64.99'/>
+                    </NavLink>
+
+
+
+
+
+
+
+
+
+
                 </div>
                 <div className="hm_item_heading_top">
                     <div className='hm_item_heading_hr'></div>
