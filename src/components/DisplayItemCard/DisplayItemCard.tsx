@@ -7,19 +7,22 @@ interface Props {
     imageName: string;
     itemName: string;
     price: string;
+    sale?: string;
 }
 
-export default function DisplayItemCard({imageName, itemName, price}: Props) {
-    const imageLocation = "../../images/itemImages/" + imageName + ".jpg"
-    console.log(imageName);
+export default function DisplayItemCard({imageName, itemName, price, sale}: Props) {
+
     return (
         <div className="display_item_card">
-            <div>
+            <div className='display_item_card_image_sec'>
                 <img className="display_item_card_colors" src={Colors} alt='colors' />
                 <img className="display_item_card_image" src={imageName} alt={itemName}/>
                 <h4 className="display_item_card_name">{itemName}</h4>
             </div>
-            <h4 className="display_item_card_price">${price}</h4>
+            <div className={`display_item_card_price_cont ${sale ? 'item_price_red' : ''}`}>
+                { sale && <span className='display_item_card_sale'>${price}</span> }
+                <span className="display_item_card_price">${sale ? sale : price}</span>
+            </div>
         </div>
     );
 }

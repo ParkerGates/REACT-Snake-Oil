@@ -82,9 +82,9 @@ export default function Home() {
                 <div className="hm_item_heading_top">
                     <div className='hm_item_heading_hr'></div>
                     <div className="hm_item_heading_top_text">
-                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
+                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
                         <h3>POPULAR ITEMS</h3>
-                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
+                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
                     </div>
                     <div className='hm_item_heading_hr'></div>
                 </div>
@@ -104,9 +104,9 @@ export default function Home() {
                 <div className="hm_item_heading_top">
                     <div className='hm_item_heading_hr'></div>
                     <div className="hm_item_heading_top_text hm_item_heading_bottom_text">
-                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
+                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
                         <h3>POPULAR ITEMS</h3>
-                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
+                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
                     </div>
                     <div className='hm_item_heading_hr'></div>
                 </div>
@@ -134,17 +134,42 @@ export default function Home() {
             </div>
 
 
-            <div className="hm_sales">
+            <div className=" hm_popular hm_sales">
+                <div className="hm_item_heading_top">
+                    <div className='hm_item_heading_hr'></div>
+                    <div className="hm_item_heading_top_text">
+                        <div>SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES</div>
+                        <h3>SALES</h3>
+                        <div>SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES</div>
+                    </div>
+                    <div className='hm_item_heading_hr'></div>
+                </div>
 
+                <div className='hm_item_display'>
+                    <NavLink to='/shop' className='text_dec_none'>
+                        <DisplayItemCard imageName={Drop1} itemName='Third Eye Drops' price='99.99' sale='79.99' />
+                    </NavLink>
+                    <NavLink to='/shop' className='text_dec_none'>
+                        <DisplayItemCard imageName={Cream1} itemName='Quick Heal Rub' price='74.99' sale='54.99' />
+                    </NavLink>
+                    <NavLink to='/shop' className='text_dec_none'>
+                        <DisplayItemCard imageName={Drop2} itemName='Covid Cure' price='84.99' sale='64.99' />
+                    </NavLink>
+                </div>
 
-
-
-
-
-
-
-
+                <div className="hm_item_heading_top">
+                    <div className='hm_item_heading_hr'></div>
+                    <div className="hm_item_heading_top_text hm_item_heading_bottom_text">
+                        <div>SALES&nbsp;&nbsp;&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES</div>
+                        <h3>SALES</h3>
+                        <div>SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES</div>
+                    </div>
+                    <div className='hm_item_heading_hr'></div>
+                </div>
             </div>
+
+
+
             <footer className='hm_footer'>
 
             </footer>
