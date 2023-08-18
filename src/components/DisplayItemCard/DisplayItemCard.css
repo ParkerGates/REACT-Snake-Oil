@@ -7,7 +7,7 @@
 .display_item_card:hover {
     scale: 1.1;
 }
-.display_item_card div {
+.display_item_card_image_sec {
     padding: 1rem 1rem 0rem;
     margin: 0rem;
     background-color: white;
@@ -32,12 +32,28 @@
     margin:0rem;
     padding: .2rem 0rem .2rem;
 }
-.display_item_card_price{
-    text-align: right;
+.display_item_card_price_cont {
+    display: flex;
+    justify-content: end;
+    margin:0rem;
+    padding: .3rem 1rem .3rem;
     font-size: 1.6rem;
     font-weight: 300;
     color: #323232;
     background-color: #E0E0E0;
+}
+.display_item_card_price {
     margin:0rem;
-    padding: .3rem 1rem .3rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+.display_item_card_sale {
+    margin:0rem .3rem;
+    text-decoration: line-through;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+.item_price_red {
+    color: white;
+    background-color: #F85045;
 }
