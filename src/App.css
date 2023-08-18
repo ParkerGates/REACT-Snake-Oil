@@ -18,6 +18,5 @@ body {
   padding: 0px;
 }
 
-.align_right {
-  text-align: right;
-}
+.align_right { text-align: right; }
+.text_dec_none { text-decoration: none;}

@@ -1,9 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import DisplayItemCard from '../components/DisplayItemCard/DisplayItemCard';
 import Grid1 from '../svgs/grid1.svg';
 import Grid2 from '../svgs/grid2.svg';
 import AspLogo from '../svgs/AspLogoLarge.svg';
-import GreenSnake from '../images/greenSnake.png';
+import GreenSnake from '../images/designImages/greenSnake.png';
+import Drop1 from '../images/itemImages/drop1.jpg';
+import Drop2 from '../images/itemImages/drop2.jpg';
+import Cream1 from '../images/itemImages/cream1.jpg';
 import HomeEllipseLeft from '../svgs/HomeEllipseLeft.svg';
 import HomeEllipseRight from '../svgs/HomeEllipseRight.svg';
 import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined';
@@ -39,6 +43,7 @@ export default function Home() {
                 <hr />
             </div>
 
+
             <div className='hm_call2action'>
                 <h1>Honest To God Miracle Cures</h1>
                 <h2>100% guaranteed to cure all ailments and illnesses</h2>
@@ -50,6 +55,7 @@ export default function Home() {
                 <img className="hm_ellipse_1" src={HomeEllipseLeft} alt="ellipse" />
                 <img className="hm_ellipse_2" src={HomeEllipseRight} alt="ellipse" />
             </div>
+
 
             <div className='hm_options'>
                 <div>
@@ -67,7 +73,50 @@ export default function Home() {
                 </div>
             </div>
 
+
             <div className="hm_popular">
+                <div className="hm_item_heading_top">
+                    <div className='hm_item_heading_hr'></div>
+                    <div className="hm_item_heading_top_text">
+                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
+                        <h3>POPULAR ITEMS</h3>
+                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
+                    </div>
+                    <div className='hm_item_heading_hr'></div>
+                </div>
+                <div className='hm_item_display'>
+                    <NavLink to='/shop' className='text_dec_none'>
+                        <DisplayItemCard imageName={Drop1} itemName='Third Eye Drops' price='79.99'/>
+                    </NavLink>
+                    <NavLink to='/shop' className='text_dec_none'>
+                        <DisplayItemCard imageName={Cream1} itemName='Quick Heal Rub' price='54.99'/>
+                    </NavLink>
+                    <NavLink to='/shop' className='text_dec_none'>
+                        <DisplayItemCard imageName={Drop2} itemName='Covid Cure' price='64.99'/>
+                    </NavLink>
+
+
+
+
+
+
+
+
+
+
+                </div>
+                <div className="hm_item_heading_top">
+                    <div className='hm_item_heading_hr'></div>
+                    <div className="hm_item_heading_top_text hm_item_heading_bottom_text">
+                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
+                        <h3>POPULAR ITEMS</h3>
+                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
+                    </div>
+                    <div className='hm_item_heading_hr'></div>
+                </div>
+
+
+
 
             </div>
             <div className='hm_testimonials'>
