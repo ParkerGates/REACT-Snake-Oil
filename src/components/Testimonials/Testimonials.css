@@ -1,0 +1,55 @@
+.testimonial_card {
+    display: flex;
+    padding: 1rem 3rem;
+    margin-bottom: 2rem;
+    border: 1px solid #ebebeb;
+    background-color: #ffffff99;
+    border-radius: .2rem;
+    box-shadow: 0px 2px 3px 1px #c5c5c5;
+}
+.testimonial_card_person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 3rem;
+}
+.testimonial_card_person img {
+    width: 9.5rem;
+    border: 1px solid #ebebeb;
+    border-radius: 100rem;
+}
+.testimonial_card_person_name {
+    color: #606060;
+    margin-top: .6rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.testimonial_card_person_location {
+    color: #606060;
+    margin-top: .2rem;
+    font-size: .9rem;
+    font-weight: 300;
+}
+.testimonial_card_quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 31rem;
+    color: #606060;
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+}
+.testimonial_card_quote div {
+    width: 28rem;
+}
+.testimonial_quotation_top {
+    position: absolute;
+    top: 0px; left: 0px;
+}
+.testimonial_quotation_bottom {
+    position: absolute;
+    bottom: -.5rem; right: 0px;
+}
