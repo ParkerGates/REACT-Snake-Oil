@@ -17,6 +17,9 @@ import HomeEllipseRight from '../svgs/HomeEllipseRight.svg';
 import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
+import RedditIcon from '@mui/icons-material/Reddit';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import Colors from '../svgs/colors.svg';
 import './css/Home.css';
 
@@ -68,11 +71,11 @@ export default function Home() {
                 </div>
                 <div>
                     <span className='hm_options_icon_cont'><InfoOutlinedIcon fontSize='large' sx={{color:'#202020', height:'2.2rem', marginBottom:"2px"}}/></span>
-                    <a className='hm_options_btn' href="">Testimonials</a>
+                    <a className='hm_options_btn' href="#testimonial_section">Testimonials</a>
                 </div>
                 <div>
                     <span className='hm_options_icon_cont'><AttachMoneyOutlinedIcon fontSize='large' sx={{color:'#202020', height:'2.2rem', margin:"0px 0px 2px 2px"}}/></span>
-                    <a className='hm_options_btn' href="">Sales</a>
+                    <a className='hm_options_btn' href="#sales_section">Sales</a>
                     <img className='hm_options_color' src={Colors} alt='colors' />
                 </div>
             </div>
@@ -113,7 +116,7 @@ export default function Home() {
             </div>
 
 
-            <div className='hm_testimonials'>
+            <div id="testimonial_section" className='hm_testimonials'>
                 <h2>Testimonials</h2>
                 <div className="hm_testimonial_sub_heading">
                     <img src={Colors} alt="colors" />
@@ -134,7 +137,7 @@ export default function Home() {
             </div>
 
 
-            <div className=" hm_popular hm_sales">
+            <div id="sales_section" className=" hm_popular hm_sales">
                 <div className="hm_item_heading_top">
                     <div className='hm_item_heading_hr'></div>
                     <div className="hm_item_heading_top_text">
@@ -169,8 +172,24 @@ export default function Home() {
             </div>
 
 
-
             <footer className='hm_footer'>
+                <div className='hm_footer_outlinks'>
+                    <a href="https://github.com/ParkerGates/REACT-Snake-Oil"><GitHubIcon fontSize='large' sx={{color:'white'}}/></a>
+                    <a href="https://www.linkedin.com/in/parker-gates-943242167/"><LinkedInIcon fontSize='large' sx={{color:'white'}}/></a>
+                    <a href="https://www.reddit.com/r/snakes/"><RedditIcon fontSize='large' sx={{color:'white'}}/></a>
+                </div>
+                <div className='hm_footer_links'>
+                    <NavLink to='/' className='hm_footer_link'>Home</NavLink>
+                    <NavLink to='/about' className='hm_footer_link'>About</NavLink>
+                    <NavLink to='/shop' className='hm_footer_link'>Shop</NavLink>
+                    <NavLink to='/snake' className='hm_footer_link'>Snake</NavLink>
+                </div>
+                <div className='hm_footer_resume_project'>
+                    <span>2023 Parker Gates | Resume Project</span>
+                </div>
+                <div className='hm_colors_footer'>
+                    <img src={Colors} alt='colors' />
+                </div>
 
             </footer>
         </div>
