@@ -1,0 +1,49 @@
+/*Display========================================================*/
+.shp_display {
+
+}
+.shp_display_org {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5rem 1rem 0rem;
+    color: #303030;
+}
+.shp_display_org button {
+    margin: 0rem; padding: 0rem;
+    border:none;
+    background-color: transparent;
+}
+.shp_display_org_sort {}
+.shp_display_org_sort span { color: #303030; font-weight: 300; }
+.shp_display_org_sort select {
+    color: #303030;
+    font-family: 'Roboto';
+    font-weight: 300;
+    margin-left: .8rem;
+    padding: .4rem .3rem;
+    border: 1px solid #CACACA; 
+    border-radius: .3rem;
+    background-color: transparent;
+}
+.shp_display_org_hr {
+    height: 2px;
+    width: auto;
+    background-color: #CACACA;
+    margin: .5rem .5rem 0rem;
+}
+.shp_display_items {
+
+}
+
+
+/*Filter=========================================================*/
+.shp_filter {
+
+}
+
+
+/*Cart========================================================*/
+.shp_cart {
+
+}
