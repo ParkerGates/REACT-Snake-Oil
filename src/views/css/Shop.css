@@ -33,7 +33,20 @@
     margin: .5rem .5rem 0rem;
 }
 .shp_display_items {
-
+    display: grid;
+    justify-items: center;
+    grid-template-columns: auto auto auto;
+    gap: 50px;
+    text-align: center;
+    border: 2px solid blueviolet;
+    width: 100%;
+}
+.shp_display_item {
+    width: 20rem;
+    border: 2px solid gold
+}
+.shp_display_item_img {
+    width: 100%;
 }
 
 

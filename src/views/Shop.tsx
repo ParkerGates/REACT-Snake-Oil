@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import itemData from '../data/data';
 import AppsIcon from '@mui/icons-material/Apps';
 import TableRowsIcon from '@mui/icons-material/TableRows';
 import './css/Shop.css';
@@ -36,7 +37,16 @@ export default function Shop() {
                 <div className='shp_display_org_hr'></div>
 
                 <div className='shp_display_items'>
-
+                    { itemData.map((item) => {
+                        return (
+                            <div className='shp_display_item'>
+                                <img className="shp_display_item_img" src={item.image} alt={item.name} />
+                                <div>{item.name}</div>
+                                <div>{item.stars}</div>
+                                <div>{item.price}</div>
+                            </div>
+                        );
+                    }) }
 
 
 
