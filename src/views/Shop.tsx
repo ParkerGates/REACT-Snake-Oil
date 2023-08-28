@@ -41,9 +41,9 @@ export default function Shop() {
                         return (
                             <div className='shp_display_item'>
                                 <img className="shp_display_item_img" src={item.image} alt={item.name} />
-                                <div>{item.name}</div>
-                                <div>{item.stars}</div>
-                                <div>{item.price}</div>
+                                <div className='shp_display_item_name'>{item.name}</div>
+                                <div className='shp_display_item_stars'>{item.stars}</div>
+                                <div className='shp_display_item_price'>${item.price}</div>
                             </div>
                         );
                     }) }

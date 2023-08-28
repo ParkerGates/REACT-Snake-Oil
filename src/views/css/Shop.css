@@ -34,19 +34,29 @@
 }
 .shp_display_items {
     display: grid;
-    justify-items: center;
-    grid-template-columns: auto auto auto;
-    gap: 50px;
-    text-align: center;
-    border: 2px solid blueviolet;
-    width: 100%;
+    color: #4a4a4a;
+    gap: 1rem
+    /* width: 100%; */
 }
 .shp_display_item {
     width: 20rem;
-    border: 2px solid gold
+    text-align: center;
 }
 .shp_display_item_img {
-    width: 100%;
+    width: calc(100% - 1rem);
+    border: 1px solid #949090;
+    padding: .5rem;
+}
+.shp_display_item_name {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+}
+.shp_display_item_stars {}
+.shp_display_item_price {
+    font-size: 1.7rem;
+    font-weight: 400;
 }
 
 
