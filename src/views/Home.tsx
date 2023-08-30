@@ -6,9 +6,7 @@ import Grid1 from '../svgs/grid1.svg';
 import Grid2 from '../svgs/grid2.svg';
 import AspLogo from '../svgs/AspLogoLarge.svg';
 import GreenSnake from '../images/designImages/greenSnake.png';
-import Drop1 from '../images/itemImages/drop1.jpg';
-import Drop2 from '../images/itemImages/drop2.jpg';
-import Cream1 from '../images/itemImages/cream1.jpg';
+import itemImg from '../images/itemImageIndex';
 import Man1 from '../images/testimonials/man1.jpg';
 import Man2 from '../images/testimonials/man2.jpg';
 import Man3 from '../images/testimonials/man3.jpg';
@@ -94,13 +92,13 @@ export default function Home() {
 
                 <div className='hm_item_display'>
                     <NavLink to='/shop' className='text_dec_none'>
-                        <DisplayItemCard imageName={Drop1} itemName='Third Eye Drops' price='79.99'/>
+                        <DisplayItemCard imageName={itemImg['dropBasket']} itemName='Third Eye Drops' price='79.99'/>
                     </NavLink>
                     <NavLink to='/shop' className='text_dec_none'>
-                        <DisplayItemCard imageName={Cream1} itemName='Quick Heal Rub' price='54.99'/>
+                        <DisplayItemCard imageName={itemImg['creamGreen']} itemName='Quick Heal Rub' price='54.99'/>
                     </NavLink>
                     <NavLink to='/shop' className='text_dec_none'>
-                        <DisplayItemCard imageName={Drop2} itemName='Covid Cure' price='64.99'/>
+                        <DisplayItemCard imageName={itemImg['dropPlate']} itemName='Covid Cure' price='64.99'/>
                     </NavLink>
                 </div>
 
@@ -150,13 +148,13 @@ export default function Home() {
 
                 <div className='hm_item_display'>
                     <NavLink to='/shop' className='text_dec_none'>
-                        <DisplayItemCard imageName={Drop1} itemName='Third Eye Drops' price='99.99' sale='79.99' />
+                        <DisplayItemCard imageName={itemImg['dropBasket']} itemName='Third Eye Drops' price='99.99' sale='79.99' />
                     </NavLink>
                     <NavLink to='/shop' className='text_dec_none'>
-                        <DisplayItemCard imageName={Cream1} itemName='Quick Heal Rub' price='74.99' sale='54.99' />
+                        <DisplayItemCard imageName={itemImg['creamGreen']} itemName='Quick Heal Rub' price='74.99' sale='54.99' />
                     </NavLink>
                     <NavLink to='/shop' className='text_dec_none'>
-                        <DisplayItemCard imageName={Drop2} itemName='Covid Cure' price='84.99' sale='64.99' />
+                        <DisplayItemCard imageName={itemImg['dropPlate']} itemName='Covid Cure' price='84.99' sale='64.99' />
                     </NavLink>
                 </div>
 
