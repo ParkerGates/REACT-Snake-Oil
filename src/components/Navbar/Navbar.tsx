@@ -1,13 +1,16 @@
 import { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useParams } from 'react-router-dom';
 import { ShoppingCartOutlined, Menu }  from '@mui/icons-material';
 import './Navbar.css';
 import AspLogo from '../../svgs/AspLogo.svg';
 
 function NavBar() {
+    const location = useLocation();
+    const params = useParams();
 
     const toggleSideNav = (id: string) => {
-        if (window.innerWidth > 700) { return }
+        if (location.pathname === '/' && window.innerWidth > 900) { return }
+        if (location.pathname === '/shop' && window.innerWidth > 1100) { return }
         const nav: HTMLElement = document.getElementById(id);
         const background: HTMLElement = document.getElementById("background_nav");
 
@@ -25,6 +28,9 @@ function NavBar() {
             document.getElementById("nav_left").classList.remove("side_nav_left_open");
             document.getElementById("nav_right").classList.remove("side_nav_right_open");
             document.getElementById("background_nav").classList.remove("side_nav_background_open");
+            if (document.getElementById("shp_filter") !== null) {
+                document.getElementById("shp_filter").classList.remove("shp_filter_open");
+            }
             return;
         }
     }
