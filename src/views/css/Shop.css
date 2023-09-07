@@ -43,7 +43,9 @@
     background-color: #CACACA;
     margin: .5rem .5rem 0rem;
 }
-.shp_display_items {
+
+/*Display Tile===================================================*/
+.shp_display_tile {
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: center;
@@ -55,20 +57,20 @@
     padding-top: 1rem;
     /* width: 100%; */
 }
-.shp_display_item {
+.shp_tile {
     width: 14.5rem;
     text-align: center;
 }
-.shp_display_item_img_cont {
+.shp_tile_img_cont {
     width: 13.5rem;
     position: relative;
     border: 1px solid #949090;
     padding: .5rem;
 }
-.shp_display_item_img {
+.shp_tile_img {
     width: 100%;
 }
-.shp_display_item_interaction {
+.shp_tile_interaction {
     opacity: 0;
     display: flex;
     align-items: center;
@@ -83,10 +85,10 @@
     margin:0px;
     color: white;
 }
-.shp_display_item_interaction:hover {
+.shp_tile_interaction:hover {
     opacity: 1;
 }
-.shp_display_item_interaction_cart {
+.shp_tile_interaction_cart {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,7 +100,7 @@
     color: white;
     background-color: hsla(0, 0%, 0%, 0.6);
 }
-.shp_display_item_interaction_details {
+.shp_tile_interaction_details {
     font-size: 1.2rem;
     font-family: 'Roboto';
     font-weight: 300;
@@ -109,17 +111,58 @@
     color: white;
     background-color: hsla(0, 0%, 0%, 0.6);
 }
-.shp_display_item_name {
+.shp_tile_name {
     font-size: 2rem;
     font-weight: 400;
     margin: 0px;
     padding: 0px;
 }
-.shp_display_item_stars {}
-.shp_display_item_price {
+.shp_tile_stars {}
+.shp_tile_price {
     font-size: 1.7rem;
     font-weight: 400;
 }
+
+/*Display Row====================================================*/
+.shp_display_row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    height: calc(100vh - 6.6rem);
+    width: 100%;
+    overflow-y: scroll;
+    padding-top: 1rem;
+}
+.shp_row {
+    display: flex;
+    gap: 1rem;
+    width: 90%;
+    border: 2px solid #949090;
+    padding: .5rem;
+}
+.shp_row_img {
+    width: 14.5rem;
+}
+.shp_row_details_cont {
+    position: relative;
+}
+.shp_row_header {
+    display: flex;
+    justify-content: space-between;
+}
+.shp_row_description {
+    margin-top: 1rem;
+}
+.shp_row_footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+.shp_row_footer_btn {}
+
 
 
 /*Filter=========================================================*/

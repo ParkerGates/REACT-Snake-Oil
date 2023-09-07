@@ -57,24 +57,47 @@ export default function Shop() {
                 </div>
                 <div className='shp_display_org_hr'></div>
 
-                <div className='shp_display_items'>
+                <div className={orgLayout === 'tile' ? 'shp_display_tile' : 'shp_display_row'}>
                     { itemData.map((item) => {
-                        return (
-                            <div className='shp_display_item' key={item.name}>
-                                <div className='shp_display_item_img_cont'>
-                                    <img className="shp_display_item_img" src={item.image} alt={item.name} />
-                                    <div className='shp_display_item_interaction'>
-                                        <button className="shp_display_item_interaction_cart">
-                                            <AddShoppingCartIcon fontSize='large' sx={{fontSize:'4.2rem'}}/>
-                                        </button>
-                                        <button className="shp_display_item_interaction_details">Details</button>
+                        if (orgLayout === "tile") {
+                            return (
+                                <div className='shp_tile' key={item.name}>
+                                    <div className='shp_tile_img_cont'>
+                                        <img className="shp_tile_img" src={item.image} alt={item.name} />
+                                        <div className='shp_tile_interaction'>
+                                            <button className="shp_tile_interaction_cart">
+                                                <AddShoppingCartIcon fontSize='large' sx={{fontSize:'4.2rem'}}/>
+                                            </button>
+                                            <button className="shp_tile_interaction_details">Details</button>
+                                        </div>
+                                    </div>
+                                    <div className='shp_tile_name'>{item.name}</div>
+                                    <div className='shp_tile_stars'>{item.stars}</div>
+                                    <div className='shp_tile_price'>${item.price}</div>
+                                </div>
+                            );
+                        }
+                        if (orgLayout === "row") {
+                            return (
+                                <div className="shp_row" key={item.name} >
+                                    <img className="shp_row_img" src={item.image} alt={item.name} />
+                                    <div className="shp_row_details_cont">
+                                        <div className="shp_row_header">
+                                            <div>{item.name}</div>
+                                            <div>{item.stars}</div>
+                                        </div>
+                                        <div className="shp_row_description">{item.description}</div>
+                                        <div className="shp_row_footer">
+                                            <div>{item.price}</div>
+                                            <div className="shp_row_footer_btn">
+                                                <button>Details</button>
+                                                <button>Add to cart <AddShoppingCartIcon /></button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className='shp_display_item_name'>{item.name}</div>
-                                <div className='shp_display_item_stars'>{item.stars}</div>
-                                <div className='shp_display_item_price'>${item.price}</div>
-                            </div>
-                        );
+                            );
+                        }
                     }) }
                 </div>
             </div>
