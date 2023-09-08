@@ -9,6 +9,7 @@
     height: 3rem;
 }
 .nav_left_sec {
+    position: relative;
     width: 9.5rem;
     min-width: 9.5rem;
     background-color: #161616;
@@ -61,7 +62,6 @@
     height: 2.9rem;
 }
 .nav_menu { display: none; }
-.nav_cart {}
 .nav_cart_side_nav {
     display: inline-block;
     position: relative;
@@ -71,9 +71,41 @@
 
 
 /*Side-Nav==============================================================================*/
-.side_nav_cont {}
-.side_nav_left { display: none; }
-.side_nav_right { display: none; }
+.side_nav_right {
+    display: inline-block;
+    position: fixed;
+    bottom: 0rem; right: -13.5rem;
+    height: 100vh; width: 13.4em;
+
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-top: none;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: right .5s;
+
+    background-image: url(../../svgs/Background.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 10;
+}
+.side_nav_right_open { right: 0rem;}
+.side_nav_left {
+    display: inline-block;
+    position: fixed;
+    bottom: 0px; left: -13.5rem;
+    height: 100vh; width: 13.4rem;
+
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-top: none;
+    transition: left .5s; 
+
+    background-image: url(../../svgs/Background.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 10;
+}
+.side_nav_left_open { left: 0rem; }
 .side_nav_background {
     display: none;
     position: fixed;
@@ -83,10 +115,13 @@
     left: 0px; bottom: 0px;
     z-index: 9;
 }
+.side_nav_background_open {
+    display: block;
+    background-color: rgba(105, 105, 105, 0.6);
+}
 
 
-/*Mobile=================================================================================*/
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
     .nav_item {
         display: none;
     }
@@ -104,42 +139,6 @@
         position: relative;
         right: 2px; top: 1px;
     }
-
-    .side_nav_left {
-        display: inline-block;
-        position: fixed;
-        bottom: 0px; left: -13.5rem;
-        height: 100vh; width: 13.4rem;
-    
-        border: 1px solid rgba(0, 0, 0, 0.6);
-        border-top: none;
-        transition: left .5s; 
-    
-        background-image: url(../../svgs/Background.svg);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-    
-    }
-    .side_nav_left_open { left: 0rem; right: 0rem; z-index: 10;}
-
-    .side_nav_right {
-        display: inline-block;
-        position: fixed;
-        bottom: 0rem; right: -13.5rem;
-        height: 100vh; width: 13.4em;
-    
-        border: 1px solid rgba(0, 0, 0, 0.6);
-        border-top: none;
-        background-color: rgba(255, 255, 255, 0.4);
-        transition: right .5s;
-
-        background-image: url(../../svgs/Background.svg);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-    }
-    .side_nav_right_open { right: 0rem; z-index: 10;}
 
     .side_nav_background_open {
         display: block;

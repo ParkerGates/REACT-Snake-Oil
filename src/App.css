@@ -10,6 +10,13 @@ body {
   overflow-x: hidden;
 }
 
+
+.scrollCutOff {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .empty_btn {
   border: none;
   background-color: transparent;

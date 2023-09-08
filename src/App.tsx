@@ -8,6 +8,7 @@ import Shop from './views/Shop';
 export default function App() {
 
   return (
+    <div className="scrollCutOff">
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -16,5 +17,6 @@ export default function App() {
         <Route path="/shop" element={<Shop />} />
       </Routes>
     </BrowserRouter>
+    </div>
   );
 }
