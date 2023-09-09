@@ -4,6 +4,8 @@ import AppsIcon from '@mui/icons-material/Apps';
 import TableRowsIcon from '@mui/icons-material/TableRows';
 import TuneIcon from '@mui/icons-material/Tune';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import Stars from '../components/Stars/Stars';
+import ShopFilter from '../components/ShopFilter/ShopFilter';
 import './css/Shop.css';
 
 export default function Shop() {
@@ -32,7 +34,7 @@ export default function Shop() {
     return(
         <div className="shp_cont">
             <div id="shp_filter" className="shp_filter">
-
+                <ShopFilter />
 
             </div>
 
@@ -72,7 +74,7 @@ export default function Shop() {
                                         </div>
                                     </div>
                                     <div className='shp_tile_name'>{item.name}</div>
-                                    <div className='shp_tile_stars'>{item.stars}</div>
+                                    <div className='shp_tile_stars'><Stars rating={item.stars} /></div>
                                     <div className='shp_tile_price'>${item.price}</div>
                                 </div>
                             );
@@ -84,14 +86,14 @@ export default function Shop() {
                                     <div className="shp_row_details_cont">
                                         <div className="shp_row_header">
                                             <div>{item.name}</div>
-                                            <div>{item.stars}</div>
+                                            <Stars rating={item.stars} />
                                         </div>
                                         <div className="shp_row_description">{item.description}</div>
                                         <div className="shp_row_footer">
-                                            <div>{item.price}</div>
+                                            <div className='shp_row_footer_price'>${item.price}</div>
                                             <div className="shp_row_footer_btn">
                                                 <button>Details</button>
-                                                <button>Add to cart <AddShoppingCartIcon /></button>
+                                                <button style={{position:'relative'}}><span>Add to cart </span><AddShoppingCartIcon fontSize='small' sx={{fontSize:"17px",position:'absolute',right:'8px'}}/></button>
                                             </div>
                                         </div>
                                     </div>

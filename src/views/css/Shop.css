@@ -13,7 +13,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    margin: .5rem 1rem 0rem;
+    margin: .5rem 2rem 0rem;
     color: #303030;
 }
 .shp_display_org_layout_filter { display: flex; }
@@ -41,7 +41,7 @@
     height: 2px;
     width: auto;
     background-color: #CACACA;
-    margin: .5rem .5rem 0rem;
+    margin: .5rem 1.2rem 0rem;
 }
 
 /*Display Tile===================================================*/
@@ -60,6 +60,7 @@
 .shp_tile {
     width: 14.5rem;
     text-align: center;
+    margin-bottom: .8rem;
 }
 .shp_tile_img_cont {
     width: 13.5rem;
@@ -112,14 +113,14 @@
     background-color: hsla(0, 0%, 0%, 0.6);
 }
 .shp_tile_name {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 400;
-    margin: 0px;
+    margin: .4rem 0px .5px;
     padding: 0px;
 }
-.shp_tile_stars {}
 .shp_tile_price {
-    font-size: 1.7rem;
+    color: #5a5a5a;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
@@ -138,11 +139,14 @@
     display: flex;
     gap: 1rem;
     width: 90%;
-    border: 2px solid #949090;
+    color: #5a5a5a;
+    border: 1px solid #949090;
     padding: .5rem;
+    margin-bottom: 1rem;
 }
 .shp_row_img {
     width: 14.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .shp_row_details_cont {
     position: relative;
@@ -151,18 +155,37 @@
     display: flex;
     justify-content: space-between;
 }
+.shp_row_header div {
+    font-weight: 400;
+    font-size: 2.2rem;
+}
 .shp_row_description {
+    font-size: 1.4rem;
     margin-top: 1rem;
 }
 .shp_row_footer {
     display: flex;
     justify-content: space-between;
+    align-items: end;
     width: 100%;
     position: absolute;
     bottom: 0px;
 }
-.shp_row_footer_btn {}
-
+.shp_row_footer_price {
+ font-size: 2rem;
+}
+.shp_row_footer_btn button {
+    font-family: 'Roboto';
+    font-weight: 400;
+    color: white;
+    background-color: #393939;
+    border: none;
+    border-radius: .2rem;
+    margin-left: 1rem;
+    height: 1.5rem;
+    padding: 0rem 1rem 0rem;
+}
+.shp_row_footer_btn:last-child span { padding-right: 1.3rem; }
 
 
 /*Filter=========================================================*/
