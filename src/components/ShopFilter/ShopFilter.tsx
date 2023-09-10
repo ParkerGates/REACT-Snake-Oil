@@ -1,12 +1,21 @@
-import react from 'react';
+import react, { useState } from 'react';
+import { FilterForm } from '../../interface/interfaces';
+import Checkbox from '../Checkbox/Checkbox';
 
-export default function ShopFilter() {
+interface Props {
+    form: FilterForm;
+    setForm: Function;
+}
+
+export default function ShopFilter({form, setForm}: Props) {
+    const [status, setStatus] = useState(false);
+
      return (
         <div>
             <div>
                 <div>Remedy</div>
                 <div>
-                    <input type="checkbox" />
+                    <Checkbox status={status} changeStatus={setStatus} />
                     <label>Test</label>
                 </div>
                 <div>
