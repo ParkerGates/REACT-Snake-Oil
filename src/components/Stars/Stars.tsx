@@ -10,9 +10,9 @@ export default function Stars({rating}: Props) {
     return (
         <span>
             { [...Array(5)].map((i, count) => {
-                if (rating > count && rating < (count + 1)) { return <StarHalfIcon sx={{color:'#FF6006'}} /> }
-                else if (rating > count) { return  <StarRateIcon sx={{color:'#FF6006'}} /> }
-                return <StarOutlineIcon sx={{color:'#FF6006'}} />
+                if (rating > count && rating < (count + 1)) { return <StarHalfIcon key={count} sx={{color:'#FF6006'}} /> }
+                else if (rating > count) { return <StarRateIcon key={count} sx={{color:'#FF6006'}} /> }
+                return <StarOutlineIcon key={count} sx={{color:'#FF6006'}} />
             })}
         </span>
     );

@@ -12,16 +12,14 @@ export default function Shop() {
     const [orgSort, setOrgSort] = useState<string>("featured");
     const [orgLayout, setOrgLayout] = useState<"tile"|"row">("tile");
 
-    const testPlz = () => {
-        // console.log("Bo bo BO bO BO");
-        console.log(document.getElementById("shp_filter").classList);
+    const openFilter = () => {
         document.getElementById("background_nav").classList.add("side_nav_background_open");
         document.getElementById('shp_filter').classList.add("shp_filter_open");
-        console.log(document.getElementById("shp_filter").classList);
     }
 
-    const openFilter = () => {
-        document.getElementById('shp_filter').classList.add("shp_filter_open");
+    const closeFilter = () => {
+        document.getElementById("background_nav").classList.remove("side_nav_background_open");
+        document.getElementById('shp_filter').classList.remove("shp_filter_open");
     }
 
     // useEffect(()=> {
@@ -42,7 +40,7 @@ export default function Shop() {
             <div className='shp_display'>
                 <div className='shp_display_org'>
                     <div className="shp_display_org_layout_filter">
-                        <button onClick={() => {testPlz()}} className="shp_filter_toggle"><TuneIcon fontSize='large' sx={{color:'#696969', marginRight:'1rem'}}/></button>
+                        <button onClick={() => {openFilter()}} className="shp_filter_toggle"><TuneIcon fontSize='large' sx={{color:'#696969', marginRight:'1rem'}}/></button>
                         <button onClick={() => {setOrgLayout("tile")}}><AppsIcon fontSize='large' sx={orgLayout === "tile" ? {color:'#696969'} : {color:'#CACACA'}} /></button>
                         <button onClick={() => {setOrgLayout("row")}}><TableRowsIcon fontSize='large' sx={orgLayout === "tile" ? {color:'#CACACA'} : {color:'#696969'}} /></button>
                     </div>
@@ -73,7 +71,7 @@ export default function Shop() {
                                             <button className="shp_tile_interaction_details">Details</button>
                                         </div>
                                     </div>
-                                    <div className='shp_tile_name'>{item.name}</div>
+                                    <div className='shp_tile_title'>{item.name}</div>
                                     <div className='shp_tile_stars'><Stars rating={item.stars} /></div>
                                     <div className='shp_tile_price'>${item.price}</div>
                                 </div>
@@ -85,13 +83,13 @@ export default function Shop() {
                                     <img className="shp_row_img" src={item.image} alt={item.name} />
                                     <div className="shp_row_details_cont">
                                         <div className="shp_row_header">
-                                            <div>{item.name}</div>
+                                            <div className="shp_row_title">{item.name}</div>
                                             <Stars rating={item.stars} />
                                         </div>
                                         <div className="shp_row_description">{item.description}</div>
                                         <div className="shp_row_footer">
-                                            <div className='shp_row_footer_price'>${item.price}</div>
-                                            <div className="shp_row_footer_btn">
+                                            <div className='shp_row_price'>${item.price}</div>
+                                            <div className="shp_row_btns">
                                                 <button>Details</button>
                                                 <button style={{position:'relative'}}><span>Add to cart </span><AddShoppingCartIcon fontSize='small' sx={{fontSize:"17px",position:'absolute',right:'8px'}}/></button>
                                             </div>
