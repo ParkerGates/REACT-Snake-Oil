@@ -2,7 +2,7 @@ import itemImg from "../images/itemImageIndex"
 
 const itemData = [
     {
-        name: "creamGreen",
+        name: "Third Eye Drops",
         alias: "creamGreen",
         price: 79.99,
         stars: 5,
@@ -13,10 +13,10 @@ const itemData = [
         form: "creams",
     },
     {
-        name: "creamPink",
+        name: "Quick Heal Rub",
         alias: "creamPink",
         price: 79.99,
-        stars: 5,
+        stars: 3.5,
         image: itemImg["creamPink"],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         details: ["aaa","bbb","ccc"],
@@ -24,10 +24,10 @@ const itemData = [
         form: "creams",
     },
     {
-        name: "dropPlate",
+        name: "Covid Cure",
         alias: "dropPlate",
         price: 79.99,
-        stars: 5,
+        stars: 4.8,
         image: itemImg["dropPlate"],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         details: ["aaa","bbb","ccc"],
@@ -38,7 +38,7 @@ const itemData = [
         name: "dropBasket",
         alias: "dropBasket",
         price: 79.99,
-        stars: 5,
+        stars: 4,
         image: itemImg["dropBasket"],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         details: ["aaa","bbb","ccc"],
@@ -49,7 +49,7 @@ const itemData = [
         name: "dropPink",
         alias: "dropPink",
         price: 79.99,
-        stars: 5,
+        stars: 4,
         image: itemImg["dropPink"],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         details: ["aaa","bbb","ccc"],

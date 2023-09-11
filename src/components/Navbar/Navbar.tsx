@@ -9,7 +9,6 @@ function NavBar() {
     const params = useParams();
 
     const toggleSideNav = (id: string) => {
-        // if (location.pathname === '/' && window.innerWidth > 900) { return }
         if (location.pathname === '/shop' && window.innerWidth > 1100) { return }
         const nav: HTMLElement = document.getElementById(id);
         const background: HTMLElement = document.getElementById("background_nav");
