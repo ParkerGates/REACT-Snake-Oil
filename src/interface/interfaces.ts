@@ -13,7 +13,8 @@ interface StoreItem {
 interface FilterForm {
     remedy: []|['miracle'|'natural'|'daily'],
     form: []|['oils'|'drops'|'creams'|'rubs'],
-    price: [number|null, number|null],
+    priceLow: number|undefined,
+    priceHigh: number|undefined,
     sales: boolean,
 }
 
