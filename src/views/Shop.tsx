@@ -7,10 +7,18 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Stars from '../components/Stars/Stars';
 import ShopFilter from '../components/ShopFilter/ShopFilter';
 import './css/Shop.css';
+import { FilterForm } from '../interface/interfaces';
 
 export default function Shop() {
     const [orgSort, setOrgSort] = useState<string>("featured");
     const [orgLayout, setOrgLayout] = useState<"tile"|"row">("tile");
+    const [filterForm, setFilterForm] = useState<FilterForm>({
+        remedy: [],
+        form: [],
+        priceLow: undefined,
+        priceHigh: undefined,
+        sales: false,
+    })
 
     const openFilter = () => {
         document.getElementById("background_nav").classList.add("side_nav_background_open");
@@ -22,17 +30,10 @@ export default function Shop() {
         document.getElementById('shp_filter').classList.remove("shp_filter_open");
     }
 
-    // useEffect(()=> {
-    //     window.addEventListener('resize', closeSideNav);
-    //     return () => {
-    //         window.removeEventListener('resize', closeSideNav);
-    //     }
-    // }, []);
-
     return(
         <div className="shp_cont">
             <div id="shp_filter" className="shp_filter">
-                <ShopFilter />
+                <ShopFilter form={filterForm} setForm={setFilterForm}/>
 
             </div>
 

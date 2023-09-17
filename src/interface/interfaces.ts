@@ -1,4 +1,4 @@
-interface storeItem {
+interface StoreItem {
     name: string;
     alias: string;
     price: number;
@@ -10,4 +10,12 @@ interface storeItem {
     form: 'cream'|'drop'|'oil'|'pill'|'powder'|'soap';
 }
 
-export type { storeItem }
+interface FilterForm {
+    remedy: []|['miracle'|'natural'|'daily'],
+    form: []|['oils'|'drops'|'creams'|'rubs'],
+    priceLow: number|undefined,
+    priceHigh: number|undefined,
+    sales: boolean,
+}
+
+export type { StoreItem, FilterForm }
