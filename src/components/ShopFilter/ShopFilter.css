@@ -1,3 +1,33 @@
+.filter_cont {
+    border: 1px solid purple;
+    padding: 2rem 1.5rem 1rem;
+}
+
+.filter_sec_cont {
+    margin-bottom: 1.8rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #a4a4a4;
+    height: auto;
+    max-height: 12rem;
+    transition: max-height .2s;
+}
+.filter_sec_cont_collapsed {
+    max-height: 1.9rem;
+    overflow: hidden;
+}
+
+.filter_title {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin: 0rem 0rem .8rem;
+}
+.filter_title:hover { cursor: pointer; }
+.filter_title_text {
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
 .filter_remedy_cont {}
 .filter_remedy_title {}
 
@@ -7,5 +37,11 @@
 .filter_price_cont {}
 .filter_price_title {}
 
-.filter_checkbox_sec {}
-.filter_checkbox_name {}
+.filter_checkbox_sec {
+    display: flex;
+    margin: 0px 0px .8rem 1rem;
+}
+.filter_checkbox_name {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
