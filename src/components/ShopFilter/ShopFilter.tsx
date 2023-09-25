@@ -1,6 +1,8 @@
 import react, { useState } from 'react';
-import { FilterForm } from '../../interface/interfaces';
-import Checkbox from '../Checkbox/Checkbox';
+import { FilterForm, FilterFormOptions } from '../../interface/interfaces';
+import {CheckboxArray, CheckboxSimple} from '../Checkbox/Checkbox';
+import PlusMinus from '../PlusMinus/PlusMinus';
+import './ShopFilter.css';
 
 interface Props {
     form: FilterForm;
@@ -8,48 +10,96 @@ interface Props {
 }
 
 export default function ShopFilter({form, setForm}: Props) {
+    const [priceLow, setPriceLow] = useState(form.priceMin === undefined ? '':String(form.priceMin));
+    const [priceHigh, setPriceHigh] = useState(form.priceMax === undefined ? '':String(form.priceMax));
+    const [t, setT] = useState<boolean>(true);
+    const [section, setSection] = useState<{remedy:boolean,form:boolean,price:boolean}>({
+        remedy: true,
+        form: true,
+        price: true
+    });
+
+    const onApply = () => {
+        let newForm = {...form}; 
+        if (priceLow === "" && priceHigh === "") {
+            setForm({...newForm, priceMax: undefined, priceLow: undefined});
+            setPriceLow(''); setPriceHigh(''); return;
+        }
+        newForm.priceMin = Number(+priceLow > +priceHigh ?  priceHigh:priceLow);
+        newForm.priceMax = Number(+priceLow > +priceHigh ? priceLow:priceHigh);
+        setForm(newForm);
+        setPriceLow(String(newForm.priceMin));
+        setPriceHigh(String(newForm.priceMax));
+    }
+
+    const toggleSection = (title: 'remedy'|'form'|'price') => {
+        let newSection = {...section};
+        newSection[title] = !section[title];
+        setSection(newSection);
+    }
 
      return (
-        <div>
-            <div className='filter_remedy_cont'>
-                <div className='filter_remedy_title'>Remedy</div>
+        <div className='filter_cont'>
+            <div className={section.remedy ? 'filter_sec_cont' : "filter_sec_cont filter_sec_cont_collapsed"}>
+                <div onClick={()=>toggleSection('remedy')} className="filter_title">
+                    <PlusMinus status={section.remedy} />
+                    <div className='filter_title_text'>Remedy</div>
+                </div>
                 <div className='filter_checkbox_sec'>
-                    <Checkbox name={"miracle"} catagory={"remedy"} form={form} changeForm={setForm} />
+                    <CheckboxArray name={"miracle"} catagory={"remedy"} form={form} changeForm={setForm} />
                     <label className='filter_checkbox_name' >Miracle Cures</label>
                 </div>
                 <div className='filter_checkbox_sec'>
-                    <Checkbox name={"natural"} catagory={"remedy"} form={form} changeForm={setForm} />
+                    <CheckboxArray name={"natural"} catagory={"remedy"} form={form} changeForm={setForm} />
                     <label className='filter_checkbox_name' >Natural Remedies</label>
                 </div>
                 <div className='filter_checkbox_sec'>
-                    <Checkbox name={"daily"} catagory={"remedy"} form={form} changeForm={setForm} />
+                    <CheckboxArray name={"daily"} catagory={"remedy"} form={form} changeForm={setForm} />
                     <label className='filter_checkbox_name' >Daily Heatlh</label>
                 </div>
             </div>
-            <div className='filter_form_cont'>
-                <div className='filter_form_title'>Form</div>
+
+
+            <div className={section.form ? 'filter_sec_cont' : "filter_sec_cont filter_sec_cont_collapsed"}>
+                <div onClick={()=>toggleSection('form')} className="filter_title">
+                    <PlusMinus status={section.form} />
+                    <div className='filter_title_text'>Form</div>
+                </div>
                 <div className='filter_checkbox_sec'>
-                    <Checkbox name={"oils"} catagory={"form"} form={form} changeForm={setForm} />
+                    <CheckboxArray name={"oils"} catagory={"form"} form={form} changeForm={setForm} />
                     <label className='filter_checkbox_name' >Oils</label>
                 </div>
                 <div className='filter_checkbox_sec'>
-                    <Checkbox name={"drops"} catagory={"form"} form={form} changeForm={setForm} />
+                    <CheckboxArray name={"drops"} catagory={"form"} form={form} changeForm={setForm} />
                     <label className='filter_checkbox_name' >Drops</label>
                 </div>
                 <div className='filter_checkbox_sec'>
-                    <Checkbox name={"creams"} catagory={"form"} form={form} changeForm={setForm} />
+                    <CheckboxArray name={"creams"} catagory={"form"} form={form} changeForm={setForm} />
                     <label className='filter_checkbox_name' >Creams</label>
                 </div>
                 <div className='filter_checkbox_sec'>
-                    <Checkbox name={"rubs"} catagory={"form"} form={form} changeForm={setForm} />
+                    <CheckboxArray name={"rubs"} catagory={"form"} form={form} changeForm={setForm} />
                     <label className='filter_checkbox_name' >Rubs</label>
                 </div>
             </div>
-            <div className='filter_price_cont'>
-                <div className='filter_price_title' onClick={()=>{console.log(form)}}>Price</div>
-                <input value={form.priceLow} onChange={e=>setForm({...form, priceLow: e.target.value })} type="number" />
+
+
+            <div  className={section.price ? 'filter_sec_cont' : "filter_sec_cont filter_sec_cont_collapsed"}>
+                <div onClick={()=>toggleSection('price')} className="filter_title">
+                    <PlusMinus status={section.price} />
+                    <div className='filter_title_text'>Price</div>
+                </div>
+                <input className='filter_price_input' value={priceLow} type="text" maxLength={3} placeholder='$' autoComplete="off" onChange={e=>setPriceLow(e.target.value.replace(/\D/g, ''))} />
                 <span>to</span>
-                <input value={form.priceHigh} onChange={e=>setForm({...form, priceHigh: e.target.value })} type="number" />
+                <input className='filter_price_input' value={priceHigh} type="text" maxLength={3} placeholder='$$$' autoComplete="off" onChange={e=>setPriceHigh(e.target.value.replace(/\D/g, ''))} />
+                <div className='filter_price_btn_cont'>
+                    <button onClick={onApply}>Apply</button>
+                    {/* <button onClick={onReset}>Reset</button> */}
+                </div>
+                <div className='filter_checkbox_sec filter_price_checkbox'>
+                    <CheckboxSimple bool={form.sales} toggle={()=>setForm({...form, sales: !form.sales})}/>
+                    <label className='filter_checkbox_name' >Sales</label>
+                </div>
             </div>
         </div>
      );

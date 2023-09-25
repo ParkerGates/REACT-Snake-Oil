@@ -8,7 +8,7 @@ interface Props {
     changeForm: Function;
 }
 
-export default function Checkbox({name, catagory, form, changeForm}: Props) {
+export default function CheckboxArray({name, catagory, form, changeForm}: Props) {
     const exists = form[catagory].includes(name);
     
     const toggleCheckbox = () => {
@@ -29,3 +29,14 @@ export default function Checkbox({name, catagory, form, changeForm}: Props) {
         </span>
     );
 }
+
+function CheckboxSimple({bool, toggle}) {
+
+    return (
+        <span className="filter_checkbox" onClick={toggle}>
+            <div className={(bool && 'filter_checkbox_checked') || 'filter_checkbox_unchecked'}></div>
+        </span>
+    );
+}
+
+export {CheckboxArray, CheckboxSimple};

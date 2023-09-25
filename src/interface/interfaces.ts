@@ -13,9 +13,11 @@ interface StoreItem {
 interface FilterForm {
     remedy: []|['miracle'|'natural'|'daily'],
     form: []|['oils'|'drops'|'creams'|'rubs'],
-    priceLow: number|undefined,
-    priceHigh: number|undefined,
+    priceMin: number|undefined,
+    priceMax: number|undefined,
     sales: boolean,
 }
 
-export type { StoreItem, FilterForm }
+type FilterFormOptions = 'miracle'|'natural'|'daily'|'oils'|'drops'|'creams'|'rubs'
+
+export type { StoreItem, FilterForm, FilterFormOptions }
