@@ -15,6 +15,7 @@ export default function Shop() {
     const [filterForm, setFilterForm] = useState<FilterForm>({
         remedy: [],
         form: [],
+        priceMin: undefined,
         priceMax: undefined,
         sales: false,
     })

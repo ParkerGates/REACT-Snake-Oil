@@ -1,6 +1,6 @@
 import react, { useState } from 'react';
-import { FilterForm } from '../../interface/interfaces';
-import Checkbox from '../Checkbox/Checkbox';
+import { FilterForm, FilterFormOptions } from '../../interface/interfaces';
+import {CheckboxArray, CheckboxSimple} from '../Checkbox/Checkbox';
 import PlusMinus from '../PlusMinus/PlusMinus';
 import './ShopFilter.css';
 
@@ -10,7 +10,8 @@ interface Props {
 }
 
 export default function ShopFilter({form, setForm}: Props) {
-    const [price, setPrice] = useState(form.priceMax === undefined ? '':String(form.priceMax));
+    const [priceLow, setPriceLow] = useState(form.priceMin === undefined ? '':String(form.priceMin));
+    const [priceHigh, setPriceHigh] = useState(form.priceMax === undefined ? '':String(form.priceMax));
     const [t, setT] = useState<boolean>(true);
     const [section, setSection] = useState<{remedy:boolean,form:boolean,price:boolean}>({
         remedy: true,
@@ -18,24 +19,22 @@ export default function ShopFilter({form, setForm}: Props) {
         price: true
     });
 
-    const onReset = () => {
-        setPrice("");
-        let newForm = {...form};
-
-    }
-
     const onApply = () => {
-        console.log("apply", )
-    }
-
-    const isDisabled = () => {
-        console.log(Number(''))
+        let newForm = {...form}; 
+        if (priceLow === "" && priceHigh === "") {
+            setForm({...newForm, priceMax: undefined, priceLow: undefined});
+            setPriceLow(''); setPriceHigh(''); return;
+        }
+        newForm.priceMin = Number(+priceLow > +priceHigh ?  priceHigh:priceLow);
+        newForm.priceMax = Number(+priceLow > +priceHigh ? priceLow:priceHigh);
+        setForm(newForm);
+        setPriceLow(String(newForm.priceMin));
+        setPriceHigh(String(newForm.priceMax));
     }
 
     const toggleSection = (title: 'remedy'|'form'|'price') => {
         let newSection = {...section};
         newSection[title] = !section[title];
-        console.log(section[title], newSection[title]);
         setSection(newSection);
     }
 
@@ -47,15 +46,15 @@ export default function ShopFilter({form, setForm}: Props) {
                     <div className='filter_title_text'>Remedy</div>
                 </div>
                 <div className='filter_checkbox_sec'>
-                    <Checkbox name={"miracle"} catagory={"remedy"} form={form} changeForm={setForm} />
+                    <CheckboxArray name={"miracle"} catagory={"remedy"} form={form} changeForm={setForm} />
                     <label className='filter_checkbox_name' >Miracle Cures</label>
                 </div>
                 <div className='filter_checkbox_sec'>
-                    <Checkbox name={"natural"} catagory={"remedy"} form={form} changeForm={setForm} />
+                    <CheckboxArray name={"natural"} catagory={"remedy"} form={form} changeForm={setForm} />
                     <label className='filter_checkbox_name' >Natural Remedies</label>
                 </div>
                 <div className='filter_checkbox_sec'>
-                    <Checkbox name={"daily"} catagory={"remedy"} form={form} changeForm={setForm} />
+                    <CheckboxArray name={"daily"} catagory={"remedy"} form={form} changeForm={setForm} />
                     <label className='filter_checkbox_name' >Daily Heatlh</label>
                 </div>
             </div>
@@ -67,19 +66,19 @@ export default function ShopFilter({form, setForm}: Props) {
                     <div className='filter_title_text'>Form</div>
                 </div>
                 <div className='filter_checkbox_sec'>
-                    <Checkbox name={"oils"} catagory={"form"} form={form} changeForm={setForm} />
+                    <CheckboxArray name={"oils"} catagory={"form"} form={form} changeForm={setForm} />
                     <label className='filter_checkbox_name' >Oils</label>
                 </div>
                 <div className='filter_checkbox_sec'>
-                    <Checkbox name={"drops"} catagory={"form"} form={form} changeForm={setForm} />
+                    <CheckboxArray name={"drops"} catagory={"form"} form={form} changeForm={setForm} />
                     <label className='filter_checkbox_name' >Drops</label>
                 </div>
                 <div className='filter_checkbox_sec'>
-                    <Checkbox name={"creams"} catagory={"form"} form={form} changeForm={setForm} />
+                    <CheckboxArray name={"creams"} catagory={"form"} form={form} changeForm={setForm} />
                     <label className='filter_checkbox_name' >Creams</label>
                 </div>
                 <div className='filter_checkbox_sec'>
-                    <Checkbox name={"rubs"} catagory={"form"} form={form} changeForm={setForm} />
+                    <CheckboxArray name={"rubs"} catagory={"form"} form={form} changeForm={setForm} />
                     <label className='filter_checkbox_name' >Rubs</label>
                 </div>
             </div>
@@ -90,13 +89,16 @@ export default function ShopFilter({form, setForm}: Props) {
                     <PlusMinus status={section.price} />
                     <div className='filter_title_text'>Price</div>
                 </div>
-                <span>0</span>
+                <input className='filter_price_input' value={priceLow} type="text" maxLength={3} placeholder='$' autoComplete="off" onChange={e=>setPriceLow(e.target.value.replace(/\D/g, ''))} />
                 <span>to</span>
-                <input id='priceHigh' value={price} type="text" autoComplete="off" onChange={e=>setPrice(e.target.value.replace(/\D/g, ''))} />
-                <div>
-                    <button onClick={onReset}>Reset</button>
+                <input className='filter_price_input' value={priceHigh} type="text" maxLength={3} placeholder='$$$' autoComplete="off" onChange={e=>setPriceHigh(e.target.value.replace(/\D/g, ''))} />
+                <div className='filter_price_btn_cont'>
                     <button onClick={onApply}>Apply</button>
-                    <button onClick={isDisabled} >test</button>
+                    {/* <button onClick={onReset}>Reset</button> */}
+                </div>
+                <div className='filter_checkbox_sec filter_price_checkbox'>
+                    <CheckboxSimple bool={form.sales} toggle={()=>setForm({...form, sales: !form.sales})}/>
+                    <label className='filter_checkbox_name' >Sales</label>
                 </div>
             </div>
         </div>

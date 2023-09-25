@@ -188,8 +188,8 @@
 
 /*Filter=========================================================*/
 .shp_filter {
-    width: 16rem;
-    min-width: 16rem;
+    width: 15rem;
+    min-width: 15rem;
     border-right: 1px solid hsla(0, 0%, 0%, 0.50);
     transition: left .5s;
     z-index: 20;
