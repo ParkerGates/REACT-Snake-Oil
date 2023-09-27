@@ -28,8 +28,8 @@ export default function ShopFilter({form, setForm}: Props) {
         newForm.priceMin = Number(+priceLow > +priceHigh ?  priceHigh:priceLow);
         newForm.priceMax = Number(+priceLow > +priceHigh ? priceLow:priceHigh);
         setForm(newForm);
-        setPriceLow(String(newForm.priceMin));
-        setPriceHigh(String(newForm.priceMax));
+        setPriceLow(newForm.priceMin === 0 ?  '': String(newForm.priceMin));
+        setPriceHigh(newForm.priceMax === 0 ? '' : String(newForm.priceMax));
     }
 
     const toggleSection = (title: 'remedy'|'form'|'price') => {

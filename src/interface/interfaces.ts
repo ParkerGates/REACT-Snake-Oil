@@ -11,8 +11,8 @@ interface StoreItem {
 }
 
 interface FilterForm {
-    remedy: []|['miracle'|'natural'|'daily'],
-    form: []|['oils'|'drops'|'creams'|'rubs'],
+    remedy: []| ('miracle'|'natural'|'daily')[],
+    form: []| ('oils'|'drops'|'creams'|'rubs')[],
     priceMin: number|undefined,
     priceMax: number|undefined,
     sales: boolean,

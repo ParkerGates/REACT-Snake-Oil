@@ -20,6 +20,13 @@ export default function Shop() {
         sales: false,
     })
 
+    const itemDataFiltered = itemData.filter((item) => {
+        let isRemedy = Boolean(filterForm.remedy.filter((f) => f === item.remedy).length) || filterForm.remedy.length === 0;
+        let isForm = Boolean(filterForm.form.filter((f) => f === item.form).length) || filterForm.form.length === 0;
+        let isPrice = (filterForm.priceMin === undefined || item.price >= filterForm.priceMin) && (filterForm.priceMax === undefined || item.price <= filterForm.priceMax);
+        if (isRemedy === true && isForm === true && isPrice === true) { return item }
+    });
+
     const openFilter = () => {
         document.getElementById("background_nav").classList.add("side_nav_background_open");
         document.getElementById('shp_filter').classList.add("shp_filter_open");
@@ -59,7 +66,7 @@ export default function Shop() {
                 <div className='shp_display_org_hr'></div>
 
                 <div className={orgLayout === 'tile' ? 'shp_display_tile' : 'shp_display_row'}>
-                    { itemData.map((item) => {
+                    { itemDataFiltered.map((item) => {
                         if (orgLayout === "tile") {
                             return (
                                 <div className='shp_tile' key={item.name}>
