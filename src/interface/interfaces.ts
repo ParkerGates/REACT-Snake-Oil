@@ -18,6 +18,7 @@ interface FilterForm {
     sales: boolean,
 }
 
-type FilterFormOptions = 'miracle'|'natural'|'daily'|'oils'|'drops'|'creams'|'rubs'
+type FilterFormOptions = 'miracle'|'natural'|'daily'|'oils'|'drops'|'creams'|'rubs';
+type SelectSortOptions = 'featured'|'alphabet'|'rated'|'priceLow'|'priceHigh';
 
-export type { StoreItem, FilterForm, FilterFormOptions }
+export type { StoreItem, FilterForm, FilterFormOptions, SelectSortOptions }
