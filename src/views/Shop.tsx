@@ -7,11 +7,11 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Stars from '../components/Stars/Stars';
 import ShopFilter from '../components/ShopFilter/ShopFilter';
 import './css/Shop.css';
-import { FilterForm } from '../interface/interfaces';
+import { FilterForm, SelectSortOptions } from '../interface/interfaces';
 
 export default function Shop() {
-    const [orgSort, setOrgSort] = useState<string>("featured");
-    const [orgLayout, setOrgLayout] = useState<"tile"|"row">("tile");
+    const [orgSort, setOrgSort] = useState<SelectSortOptions>('featured');
+    const [orgLayout, setOrgLayout] = useState<"tile"|"row"|'priceLow'>("tile");
     const [filterForm, setFilterForm] = useState<FilterForm>({
         remedy: [],
         form: [],
@@ -20,12 +20,35 @@ export default function Shop() {
         sales: false,
     })
 
-    const itemDataFiltered = itemData.filter((item) => {
+    let itemDataFiltered = itemData.filter((item) => {
         let isRemedy = Boolean(filterForm.remedy.filter((f) => f === item.remedy).length) || filterForm.remedy.length === 0;
         let isForm = Boolean(filterForm.form.filter((f) => f === item.form).length) || filterForm.form.length === 0;
         let isPrice = (filterForm.priceMin === undefined || item.price >= filterForm.priceMin) && (filterForm.priceMax === undefined || item.price <= filterForm.priceMax);
         if (isRemedy === true && isForm === true && isPrice === true) { return item }
     });
+    const itemDataFilteredNoSort = [...itemDataFiltered]
+
+    switch(orgSort) {
+        case 'featured':
+            itemDataFiltered = itemDataFilteredNoSort;
+            break;
+        case 'alphabet':
+            itemDataFiltered.sort((a,b)=> (a.name > b.name) ? 1 : -1);
+            break;
+        case 'rated':
+            itemDataFiltered.sort((a,b)=> (b.stars - a.stars));
+            break;
+        case 'priceLow':
+            itemDataFiltered.sort((a,b)=> (a.price - b.price));
+            break;
+        case 'priceHigh':
+            itemDataFiltered.sort((a,b)=> (b.price - a.price));
+            break;
+        default:
+            itemDataFiltered = itemDataFilteredNoSort;
+    }
+
+
 
     const openFilter = () => {
         document.getElementById("background_nav").classList.add("side_nav_background_open");
@@ -54,11 +77,11 @@ export default function Shop() {
                     </div>
                     <div className='shp_display_org_sort'>
                         <span>Sort by</span>
-                        <select value={orgSort} onChange={(e)=>{setOrgSort(e.target.value)}}>
+                        <select value={orgSort} onChange={(e)=>{setOrgSort(e.target.value as SelectSortOptions)}}>
                             <option value='featured'>Featured</option>
-                            <option value='lowToHigh'>Price: Low to High</option>
-                            <option value='highToLow'>Price: High to Low</option>
                             <option value='rated'>Highest Rated</option>
+                            <option value='priceLow'>Price: Low to High</option>
+                            <option value='priceHigh'>Price: High to Low</option>
                             <option value='alphabet'>Alphabetically</option>
                         </select>
                     </div>
