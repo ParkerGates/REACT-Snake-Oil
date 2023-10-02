@@ -1,0 +1,104 @@
+.shp_popup_cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 30;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.539);
+}
+.shp_popup {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 75vw;
+    max-width: 70rem;
+    height: 34rem;
+    padding: 1.5rem;
+    color: rgb(74, 74, 74);
+    background-color: white;
+    background-image: url('../../svgs/Background.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.shp_popup_img_sec {
+    width: 50rem;
+    min-width: 20rem;
+}
+.shp_popup_details_sec {
+    width: 100%;
+    min-width: 30rem;
+}
+
+.shp_popup_img {
+    width: calc(100% - 2rem);
+    padding: .5rem;
+    outline: 1px solid rgba(0, 0, 0, 0.2);
+}
+.shp_popup_img_legalese {
+    color: gray;
+    font-size: .85rem;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+.shp_popup_title_sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+.shp_popup_title {
+    font-size: 2.5rem;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.shp_popup_price {
+    font-size: 2.1rem;
+    margin-bottom: 2rem;
+}
+.shp_popup_description {
+    font-size: 1.4rem;
+    margin: .5rem 0px 2rem 10px;
+}
+.shp_popup_details_list { font-size: 1.2rem; margin: 8px 0px 0px -8px; }
+.shp_popup_details_list_item { margin-bottom: .2rem; }
+.shp_popup_subsec { font-size: .9rem; }
+
+.shp_popup_cart_btn {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    padding: 7px 4rem 7px 2rem;
+    color: white;
+    background-color: rgb(45, 45, 45);
+    font-size: 1.5rem;
+    font-family: 'Roboto';
+    border: none;
+    border-radius: 3px;
+}
+
+.shp_popup_big { display: inline-block;}
+.shp_popup_medium {display: none;}
+
+@media screen and (max-width: 1100px) {
+    .shp_popup {
+        min-width: 40rem;
+        height: 27rem;
+    }
+    .shp_popup_details_sec { min-width: 20rem; }
+    .shp_popup_title { font-size: 1.8rem; }
+    .shp_popup_price { font-size: 1.5rem; }
+    .shp_popup_description { font-size: 1.2rem; }
+    .shp_popup_description { font-size: 1rem; }
+    .shp_popup_details_list { font-size: 1rem; margin: 8px 0px 0px -8px; }
+    .shp_popup_cart_btn {
+        padding: 5px 3rem 5px 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .shp_popup_big { display: none; }
+    .shp_popup_medium { display: block; }
+}

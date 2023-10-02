@@ -62,6 +62,7 @@
     margin: 0px;
     color: #343434;
     background-color: #343434;
+    border: none;
 }
 .hm_scroll hr:last-child { margin-top: 1.3rem;}
 

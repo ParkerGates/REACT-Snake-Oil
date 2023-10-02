@@ -1,6 +1,7 @@
 import itemImg from "../images/itemImageIndex"
+import { StoreItem } from "../interface/interfaces";
 
-const itemData = [
+const itemData: StoreItem[] = [
     {
         name: "Anti-Aging Rub",
         alias: "creamGreen",
@@ -130,7 +131,7 @@ const itemData = [
         image: itemImg["oilWhite"],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         details: ["aaa","bbb","ccc"],
-        remedy: "4.5",
+        remedy: "natural",
         form: "oils",
     },
     {

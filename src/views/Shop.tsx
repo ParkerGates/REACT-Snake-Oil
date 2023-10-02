@@ -1,32 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
+import { FilterForm, SelectSortOptions, StoreItem } from '../interface/interfaces';
+import { useParams } from 'react-router-dom';
 import itemData from '../data/data';
 import AppsIcon from '@mui/icons-material/Apps';
 import TableRowsIcon from '@mui/icons-material/TableRows';
 import TuneIcon from '@mui/icons-material/Tune';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import Stars from '../components/Stars/Stars';
 import ShopFilter from '../components/ShopFilter/ShopFilter';
+import DisplayItemTile from '../components/DisplayItemTile/DisplayItemTile';
+import DisplayItemRow from '../components/DisplayItemRow/DisplayItemRow';
+import DisplayItemPopup from '../components/DisplayItemPopup/DisplayItemPopup';
 import './css/Shop.css';
-import { FilterForm, SelectSortOptions } from '../interface/interfaces';
 
 export default function Shop() {
+    const { details } = useParams();
     const [orgSort, setOrgSort] = useState<SelectSortOptions>('featured');
-    const [orgLayout, setOrgLayout] = useState<"tile"|"row"|'priceLow'>("tile");
+    const [orgLayout, setOrgLayout] = useState<"tile"|"row">("tile");
     const [filterForm, setFilterForm] = useState<FilterForm>({
         remedy: [],
         form: [],
         priceMin: undefined,
         priceMax: undefined,
         sales: false,
-    })
+    });
+    const selectedItem = itemData.find((item)=> item.alias === details);
 
-    let itemDataFiltered = itemData.filter((item) => {
+    let itemDataFiltered: StoreItem[] = itemData.filter((item) => {
         let isRemedy = Boolean(filterForm.remedy.filter((f) => f === item.remedy).length) || filterForm.remedy.length === 0;
         let isForm = Boolean(filterForm.form.filter((f) => f === item.form).length) || filterForm.form.length === 0;
         let isPrice = (filterForm.priceMin === undefined || item.price >= filterForm.priceMin) && (filterForm.priceMax === undefined || item.price <= filterForm.priceMax);
         if (isRemedy === true && isForm === true && isPrice === true) { return item }
     });
-    const itemDataFilteredNoSort = [...itemDataFiltered]
+    const itemDataFilteredNoSort: StoreItem[] = [...itemDataFiltered]
+
 
     switch(orgSort) {
         case 'featured':
@@ -49,7 +54,6 @@ export default function Shop() {
     }
 
 
-
     const openFilter = () => {
         document.getElementById("background_nav").classList.add("side_nav_background_open");
         document.getElementById('shp_filter').classList.add("shp_filter_open");
@@ -64,9 +68,7 @@ export default function Shop() {
         <div className="shp_cont">
             <div id="shp_filter" className="shp_filter">
                 <ShopFilter form={filterForm} setForm={setFilterForm}/>
-
             </div>
-
 
             <div className='shp_display'>
                 <div className='shp_display_org'>
@@ -90,54 +92,16 @@ export default function Shop() {
 
                 <div className={orgLayout === 'tile' ? 'shp_display_tile' : 'shp_display_row'}>
                     { itemDataFiltered.map((item) => {
-                        if (orgLayout === "tile") {
-                            return (
-                                <div className='shp_tile' key={item.name}>
-                                    <div className='shp_tile_img_cont'>
-                                        <img className="shp_tile_img" src={item.image} alt={item.name} />
-                                        <div className='shp_tile_interaction'>
-                                            <button className="shp_tile_interaction_cart">
-                                                <AddShoppingCartIcon fontSize='large' sx={{fontSize:'4.2rem'}}/>
-                                            </button>
-                                            <button className="shp_tile_interaction_details">Details</button>
-                                        </div>
-                                    </div>
-                                    <div className='shp_tile_title'>{item.name}</div>
-                                    <div className='shp_tile_stars'><Stars rating={item.stars} /></div>
-                                    <div className='shp_tile_price'>${item.price}</div>
-                                </div>
-                            );
-                        }
-                        if (orgLayout === "row") {
-                            return (
-                                <div className="shp_row" key={item.name} >
-                                    <img className="shp_row_img" src={item.image} alt={item.name} />
-                                    <div className="shp_row_details_cont">
-                                        <div className="shp_row_header">
-                                            <div className="shp_row_title">{item.name}</div>
-                                            <Stars rating={item.stars} />
-                                        </div>
-                                        <div className="shp_row_description">{item.description}</div>
-                                        <div className="shp_row_footer">
-                                            <div className='shp_row_price'>${item.price}</div>
-                                            <div className="shp_row_btns">
-                                                <button>Details</button>
-                                                <button style={{position:'relative'}}><span>Add to cart </span><AddShoppingCartIcon fontSize='small' sx={{fontSize:"17px",position:'absolute',right:'8px'}}/></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        }
+                        if (orgLayout === "tile") {return <DisplayItemTile key={item.alias} item={item} />}
+                        if (orgLayout === "row") {return <DisplayItemRow key={item.alias} item={item} />}
                     }) }
                 </div>
             </div>
 
-
             <div className='shp_cart'>
-
-
             </div>
+
+            <DisplayItemPopup item={selectedItem}/>
         </div>
     );
 }
