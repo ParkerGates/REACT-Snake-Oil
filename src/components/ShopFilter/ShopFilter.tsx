@@ -94,7 +94,6 @@ export default function ShopFilter({form, setForm}: Props) {
                 <input className='filter_price_input' value={priceHigh} type="text" maxLength={3} placeholder='$$$' autoComplete="off" onChange={e=>setPriceHigh(e.target.value.replace(/\D/g, ''))} />
                 <div className='filter_price_btn_cont'>
                     <button onClick={onApply}>Apply</button>
-                    {/* <button onClick={onReset}>Reset</button> */}
                 </div>
                 <div className='filter_checkbox_sec filter_price_checkbox'>
                     <CheckboxSimple bool={form.sales} toggle={()=>setForm({...form, sales: !form.sales})}/>

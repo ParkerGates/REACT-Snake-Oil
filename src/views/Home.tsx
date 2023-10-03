@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import DisplayItemCard from '../components/DisplayItemCard/DisplayItemCard';
 import Testimonials from '../components/Testimonials/Testimonials';
 import Grid1 from '../svgs/grid1.svg';
@@ -53,7 +53,7 @@ export default function Home() {
                 <h1>Honest To God Miracle Cures</h1>
                 <h2>100% guaranteed to cure all ailments and illnesses</h2>
                 <h2>Being sick is a choice, choose Asp instead</h2>
-                <NavLink to='/shop'><button>Shop Now</button></NavLink>
+                <Link to='/shop'><button>Shop Now</button></Link>
 
                 <div className="hm_call2action_divider1"></div>
                 <div className="hm_call2action_divider2"></div>
@@ -65,7 +65,7 @@ export default function Home() {
             <div className='hm_options'>
                 <div>
                     <span className='hm_options_icon_cont'><HandshakeOutlinedIcon fontSize='large' sx={{color:'#202020', height:'2.2rem'}}/></span>
-                    <NavLink className='hm_options_btn' to="/about">About</NavLink>
+                    <Link className='hm_options_btn' to="/about">About</Link>
                 </div>
                 <div>
                     <span className='hm_options_icon_cont'><InfoOutlinedIcon fontSize='large' sx={{color:'#202020', height:'2.2rem', marginBottom:"2px"}}/></span>
@@ -91,15 +91,15 @@ export default function Home() {
                 </div>
 
                 <div className='hm_item_display'>
-                    <NavLink to='/shop' className='text_dec_none'>
+                    <Link to='/shop/dropBasket' className='text_dec_none'>
                         <DisplayItemCard imageName={itemImg['dropBasket']} itemName='Third Eye Drops' price='79.99'/>
-                    </NavLink>
-                    <NavLink to='/shop' className='text_dec_none'>
+                    </Link>
+                    <Link to='/shop/creamGreen' className='text_dec_none'>
                         <DisplayItemCard imageName={itemImg['creamGreen']} itemName='Quick Heal Rub' price='54.99'/>
-                    </NavLink>
-                    <NavLink to='/shop' className='text_dec_none'>
+                    </Link>
+                    <Link to='/shop/dropPlate' className='text_dec_none'>
                         <DisplayItemCard imageName={itemImg['dropPlate']} itemName='Covid Cure' price='64.99'/>
-                    </NavLink>
+                    </Link>
                 </div>
 
                 <div className="hm_item_heading_top">
@@ -147,15 +147,15 @@ export default function Home() {
                 </div>
 
                 <div className='hm_item_display'>
-                    <NavLink to='/shop' className='text_dec_none'>
+                    <Link to='/sho/dropBasket' className='text_dec_none'>
                         <DisplayItemCard imageName={itemImg['dropBasket']} itemName='Third Eye Drops' price='99.99' sale='79.99' />
-                    </NavLink>
-                    <NavLink to='/shop' className='text_dec_none'>
+                    </Link>
+                    <Link to='/shop/creamGreen' className='text_dec_none'>
                         <DisplayItemCard imageName={itemImg['creamGreen']} itemName='Quick Heal Rub' price='74.99' sale='54.99' />
-                    </NavLink>
-                    <NavLink to='/shop' className='text_dec_none'>
+                    </Link>
+                    <Link to='/shop/dropPlate' className='text_dec_none'>
                         <DisplayItemCard imageName={itemImg['dropPlate']} itemName='Covid Cure' price='84.99' sale='64.99' />
-                    </NavLink>
+                    </Link>
                 </div>
 
                 <div className="hm_item_heading_top">
@@ -177,10 +177,10 @@ export default function Home() {
                     <a href="https://www.reddit.com/r/snakes/"><RedditIcon fontSize='large' sx={{color:'white'}}/></a>
                 </div>
                 <div className='hm_footer_links'>
-                    <NavLink to='/' className='hm_footer_link'>Home</NavLink>
-                    <NavLink to='/about' className='hm_footer_link'>About</NavLink>
-                    <NavLink to='/shop' className='hm_footer_link'>Shop</NavLink>
-                    <NavLink to='/snake' className='hm_footer_link'>Snake</NavLink>
+                    <Link to='/' className='hm_footer_link'>Home</Link>
+                    <Link to='/about' className='hm_footer_link'>About</Link>
+                    <Link to='/shop' className='hm_footer_link'>Shop</Link>
+                    <Link to='/snake' className='hm_footer_link'>Snake</Link>
                 </div>
                 <div className='hm_footer_resume_project'>
                     <span>2023 Parker Gates | Resume Project</span>

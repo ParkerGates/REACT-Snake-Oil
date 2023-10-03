@@ -55,72 +55,7 @@
     color: #4a4a4a;
     padding-top: 1rem;
 }
-.shp_tile {
-    width: 14.5rem;
-    text-align: center;
-    margin-bottom: .8rem;
-}
-.shp_tile_img_cont {
-    width: 13.5rem;
-    position: relative;
-    border: 1px solid #949090;
-    padding: .5rem;
-}
-.shp_tile_img {
-    width: 100%;
-}
-.shp_tile_interaction {
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    flex-direction: column;
-    position: absolute;
-    top: 0rem;
-    left: 0rem;
-    background-color: #30303047;
-    width: 14.5rem;
-    height: 14.8rem;
-    margin:0px;
-    color: white;
-}
-.shp_tile_interaction:hover {
-    opacity: 1;
-}
-.shp_tile_interaction_cart {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 6.9rem;
-    height: 6.9rem;
-    margin-bottom: 1.3rem;
-    border: none; 
-    border-radius: 50rem;
-    color: white;
-    background-color: hsla(0, 0%, 0%, 0.6);
-}
-.shp_tile_interaction_details {
-    font-size: 1.2rem;
-    font-family: 'Roboto';
-    font-weight: 300;
-    padding: .2rem 2rem;
-    margin-bottom: 1.6rem;
-    border: none; 
-    border-radius: 1rem;
-    color: white;
-    background-color: hsla(0, 0%, 0%, 0.6);
-}
-.shp_tile_title {
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin: .4rem 0px .5px;
-    padding: 0px;
-}
-.shp_tile_price {
-    color: #5a5a5a;
-    font-size: 1.5rem;
-    font-weight: 400;
-}
+
 
 /*Display Row====================================================*/
 .shp_display_row {
@@ -133,57 +68,6 @@
     overflow-y: scroll;
     padding-top: 1rem;
 }
-.shp_row {
-    display: flex;
-    gap: 1rem;
-    width: 90%;
-    color: #5a5a5a;
-    border: 1px solid #949090;
-    padding: .5rem;
-    margin-bottom: 1rem;
-}
-.shp_row_img {
-    width: 14.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-}
-.shp_row_details_cont {
-    position: relative;
-}
-.shp_row_header {
-    display: flex;
-    justify-content: space-between;
-}
-.shp_row_title {
-    font-weight: 400;
-    font-size: 2.2rem;
-}
-.shp_row_description {
-    font-size: 1.4rem;
-    margin-top: 1rem;
-}
-.shp_row_footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    width: 100%;
-    position: absolute;
-    bottom: 0px;
-}
-.shp_row_price {
- font-size: 2rem;
-}
-.shp_row_btns button {
-    font-family: 'Roboto';
-    font-weight: 400;
-    color: white;
-    background-color: #393939;
-    border: none;
-    border-radius: .2rem;
-    margin-left: 1rem;
-    height: 1.5rem;
-    padding: 0rem 1rem 0rem;
-}
-.shp_row_btns:last-child span { padding-right: 1.3rem; }
 
 
 /*Filter=========================================================*/

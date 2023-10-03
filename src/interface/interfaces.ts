@@ -6,8 +6,8 @@ interface StoreItem {
     image: any;
     description: string;
     details: string[];
-    remedy: "maricle"|'remedy'|'daily';
-    form: 'cream'|'drop'|'oil'|'pill'|'powder'|'soap';
+    remedy: "miracle"|'natural'|'daily';
+    form: 'creams'|'drops'|'oils'|'pills'|'powders'|'rubs';
 }
 
 interface FilterForm {
