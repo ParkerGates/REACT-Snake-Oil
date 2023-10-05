@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useContextData } from '../../context/context';
 import Stars from '../Stars/Stars';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import './DisplayItemRow.css';
@@ -9,6 +10,7 @@ interface Props {
 }
 
 export default function DisplayItemRow({item}: Props) {
+    const appData = useContextData(); 
 
     return (
         <div className="shp_row" key={item.name} >

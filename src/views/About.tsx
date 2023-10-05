@@ -8,8 +8,6 @@ export default function About() {
     return(
         <div className='about_body'>
             <h1>About</h1>
-            <h2>{appData.appData.test1}</h2>
-            <button onClick={()=>{appData.dispatch({type:'changeTest'})}}>click me</button>
         </div>
     );
 }

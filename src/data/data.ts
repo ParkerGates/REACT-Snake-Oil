@@ -1,5 +1,5 @@
 import itemImg from "../images/itemImageIndex"
-import { StoreItem } from "../interface/interfaces";
+import { CartItem, StoreItem } from "../interface/interfaces";
 
 const itemData: StoreItem[] = [
     {
@@ -255,6 +255,52 @@ const itemData: StoreItem[] = [
         remedy: "natural",
         form: "rubs",
     },
+];
+
+
+const testCartData: CartItem[] = [
+    {
+        amount: 1,
+        item: {
+            name: "Anti-Aging Rub",
+            alias: "creamGreen",
+            price: 79.99,
+            stars: 5,
+            image: itemImg["creamGreen"],
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+            details: ["aaa","bbb","ccc"],
+            remedy: "daily",
+            form: "creams",
+        }
+    },
+    {
+        amount: 1,
+        item: {
+            name: "Quick Heal Cream",
+            alias: "creamPink",
+            price: 89.99,
+            stars: 5,
+            image: itemImg["creamPink"],
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+            details: ["aaa","bbb","ccc"],
+            remedy: "natural",
+            form: "creams",
+        }
+    },
+    {
+        amount: 1,
+        item: {
+            name: "Covid Cure",
+            alias: "dropPlate",
+            price: 69.99,
+            stars: 4.5,
+            image: itemImg["dropPlate"],
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+            details: ["aaa","bbb","ccc"],
+            remedy: "natural",
+            form: "drops",
+        }
+    },
 ]
 
-export default itemData;
+export { itemData, testCartData }

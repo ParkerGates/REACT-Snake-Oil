@@ -1,6 +1,8 @@
+type ItemAlias = 'creamGreen'|'creamPink'|'dropPlate'|'dropBasket'|'dropPink'|'dropPlant'|'oilBlue'|'oilGreen'|'oilLavender'|'oilOrange'|'oilPurple'|'oilWhite'|'oilYellow'|'pillColor'|'pillFruit'|'pillGreen'|'pillYellow'|'powderBrown'|'powderOrange'|'powderRed'|'soapBrown'|'soapGreen'|'soapPink';
+
 interface StoreItem {
     name: string;
-    alias: string;
+    alias: ItemAlias;
     price: number;
     stars: number;
     image: any;
@@ -8,6 +10,15 @@ interface StoreItem {
     details: string[];
     remedy: "miracle"|'natural'|'daily';
     form: 'creams'|'drops'|'oils'|'pills'|'powders'|'rubs';
+}
+
+interface CartItem  {
+    amount: number;
+    item: StoreItem
+}
+
+interface AppContext {
+    cart: CartItem[];
 }
 
 interface FilterForm {
@@ -21,4 +32,5 @@ interface FilterForm {
 type FilterFormOptions = 'miracle'|'natural'|'daily'|'oils'|'drops'|'creams'|'rubs';
 type SelectSortOptions = 'featured'|'alphabet'|'rated'|'priceLow'|'priceHigh';
 
-export type { StoreItem, FilterForm, FilterFormOptions, SelectSortOptions }
+
+export type { StoreItem, AppContext, CartItem, FilterForm, FilterFormOptions, SelectSortOptions, ItemAlias }
