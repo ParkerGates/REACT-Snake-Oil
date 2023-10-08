@@ -22,6 +22,10 @@ export default function DisplayItemTile({item}: Props) {
                         <AddShoppingCartIcon fontSize='large' sx={{fontSize:'4.2rem'}}/>
                     </button>
                     <Link to={'/shop/'+ item.alias}><button className="shp_tile_interaction_details">Details</button></Link>
+                    <div className='shp_tile_interaction_test'>
+                        <div className='shp_tile_added_title'>Added</div>
+                        <button className='shp_tile_added_cancel'>Cancel</button>
+                    </div>
                 </div>
             </div>
             <div onClick={()=>{navigate('/shop/'+item.alias)}}>

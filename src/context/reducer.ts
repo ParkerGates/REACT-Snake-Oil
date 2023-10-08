@@ -6,6 +6,7 @@ interface Action {
     cartItem?: CartItem;
     storeItem?: StoreItem;
     itemIndex?: Number;
+    increment?: 1 | -1;
 }
 
 const initialState: AppContext = {
@@ -14,6 +15,7 @@ const initialState: AppContext = {
 
 let newState: AppContext;
 let newCart: CartItem[];
+let newItem: CartItem;
 
 const reducer = (state:AppContext, action: Action) => {
     switch(action.type) {
@@ -43,6 +45,19 @@ const reducer = (state:AppContext, action: Action) => {
             newCart.splice(Number(action.itemIndex), 1);
             newState.cart = [...newCart];
             console.log('heyo',state.cart.length, newState.cart.length);
+            return newState;
+
+        case "incrementCartItem":
+            //itemIndex: Number, increment: -1 | 1
+            newState = {...state};
+            newCart = [...state.cart];
+            if ((state.cart[+action.itemIndex].amount + action.increment) <= 0) {
+                newCart.splice(+action.itemIndex, 1);
+                newState.cart = newCart;
+                return newState;
+            }
+            newCart.splice(+action.itemIndex, 1,{amount: state.cart[+action.itemIndex].amount + action.increment, item: state.cart[+action.itemIndex].item});
+            newState.cart = newCart;
             return newState;
 
         default:

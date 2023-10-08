@@ -10,7 +10,7 @@ interface Props {
 }
 
 export default function DisplayItemRow({item}: Props) {
-    const appData = useContextData(); 
+    const {appData, dispatch} = useContextData(); 
 
     return (
         <div className="shp_row" key={item.name} >
@@ -25,7 +25,7 @@ export default function DisplayItemRow({item}: Props) {
                     <div className='shp_row_price'>${item.price}</div>
                     <div className="shp_row_btns">
                         <Link to={'/shop/'+ item.alias}><button>Details</button></Link>
-                        <button style={{position:'relative'}}><span>Add to cart </span><AddShoppingCartIcon fontSize='small' sx={{fontSize:"17px",position:'absolute',right:'8px'}}/></button>
+                        <button style={{position:'relative'}} onClick={()=>{dispatch({type:'addToCart',storeItem:item})}}><span>Add to cart </span><AddShoppingCartIcon fontSize='small' sx={{fontSize:"17px",position:'absolute',right:'8px'}}/></button>
                     </div>
                 </div>
             </div>
