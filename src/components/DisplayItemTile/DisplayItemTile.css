@@ -31,18 +31,6 @@
     opacity: 1;
 }
 
-.shp_tile_interaction_test {
-    display:flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    position:absolute;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 17, 128, 0.302);
-}
-
 
 .shp_tile_added_title {
     display: flex;
@@ -55,19 +43,6 @@
     font-size: 1.5rem;
     background-color: hsla(0, 0%, 0%, 0.6);
 }
-.shp_tile_added_cancel {
-    width: 8rem;
-    font-size: 1.2rem;
-    font-family: 'Roboto';
-    font-weight: 300;
-    padding: .2rem 2rem;
-    margin-bottom: 1.6rem;
-    border: none; 
-    border-radius: 1rem;
-    color: white;
-    background-color: hsla(0, 0%, 0%, 0.6);
-}
-
 
 .shp_tile_interaction_cart {
     display: flex;
