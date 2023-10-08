@@ -1,6 +1,6 @@
 .cart {
     position: relative;
-    height: 100%;
+    height: calc(100vh - 3.2rem);
 }
 .cart_header {
     display: flex;
@@ -56,8 +56,6 @@
     height: 1.9rem;
     width: 2.3rem;
     padding-left: .5rem;
-    /* border-top: 1px solid #b6b6b650;
-    border-bottom: 1px solid #b6b6b650; */
 }
 .cart_item_interact_index {
     position: absolute;

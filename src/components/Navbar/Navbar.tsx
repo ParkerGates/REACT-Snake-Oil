@@ -1,4 +1,5 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import { NavLink, useLocation, useParams } from 'react-router-dom';
 import { ShoppingCartOutlined, Menu }  from '@mui/icons-material';
 import './Navbar.css';
@@ -7,6 +8,7 @@ import AspLogo from '../../svgs/AspLogo.svg';
 function NavBar() {
     const location = useLocation();
     const params = useParams();
+    const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
 
     const toggleSideNav = (id: string) => {
         if (location.pathname === '/shop' && window.innerWidth > 1100) { return }
@@ -23,6 +25,7 @@ function NavBar() {
     }
 
     const closeSideNav = () => {
+        setScreenWidth(window.innerWidth);
         if (document.getElementById("background_nav").classList.length > 1) {
             document.getElementById("nav_left").classList.remove("side_nav_left_open");
             document.getElementById("nav_right").classList.remove("side_nav_right_open");
@@ -45,7 +48,7 @@ function NavBar() {
     return(
         <div className='nav_cont'>
 
-            <div className='nav_left_sec'>
+            <div className={'nav_left_sec ' + (location.pathname === '/shop' && (screenWidth||window.innerWidth) >= 1500 && 'nav_left_sec_shp_lg')}>
                 <img src={AspLogo} alt='asp logo' className='nav_asp_logo' />
                 <button onClick={() => {toggleSideNav('nav_left')}} className='empty_btn nav_menu'>
                     <Menu fontSize='large' sx={{color:'hsla(0, 0%, 0%, 0.7);', height:'1.8rem'}}/>
@@ -58,7 +61,7 @@ function NavBar() {
                     <NavLink to="/shop" className='nav_item'>Shop</NavLink>
                 </div>
             </div>
-            <div className='nav_right_sec'>
+            <div className={'nav_right_sec ' + (location.pathname === '/shop' && (screenWidth||window.innerWidth) >= 1100 && 'nav_right_sec_shp_lg')}>
                 <button 
                     onClick={() => {toggleSideNav('nav_right')}}
                     className='empty_btn nav_cart'>
@@ -87,6 +90,7 @@ function NavBar() {
                             <ShoppingCartOutlined className='nav_cart' fontSize='large' sx={{color:'hsla(0, 0%, 0%, 0.7);', height:'1.8rem'}} />
                         </button>
                     </div>
+                    <Cart />
                 </div>
             </div>
 

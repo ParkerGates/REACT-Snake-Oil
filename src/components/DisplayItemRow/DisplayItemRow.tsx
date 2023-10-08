@@ -7,7 +7,7 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import './DisplayItemRow.css';
 
 interface Props {
-    item: any;
+    item: StoreItem;
 }
 
 export default function DisplayItemRow({item}: Props) {
