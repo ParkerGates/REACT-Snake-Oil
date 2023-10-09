@@ -94,11 +94,13 @@
 .hm_call2action h1 {
     margin-bottom: 1.2rem;
     font-size: 3.5rem;
+    z-index: 1;
 }
 .hm_call2action h2 {
     margin:0px;
     font-size: 1.7rem;
     font-weight: 400;
+    z-index: 1;
 }
 .hm_call2action button {
     position: relative;
@@ -113,6 +115,7 @@
     border: 1px solid #626665;
     border-radius: 10px;
     cursor: pointer;
+    z-index: 1;
 }
 .hm_call2action_divider1, .hm_call2action_divider2 {
     position: absolute;
