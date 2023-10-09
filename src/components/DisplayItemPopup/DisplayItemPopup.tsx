@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { useContextData } from '../../context/context';
 import { StoreItem } from '../../interface/interfaces';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Stars from '../Stars/Stars';
@@ -11,6 +12,7 @@ interface Props {
 
 
 export default function DisplayItemPopup({item}: Props) {
+    const appData = useContextData(); 
     const navigate = useNavigate();
     if (item === undefined) { return <></> }
 

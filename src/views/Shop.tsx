@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
 import { FilterForm, SelectSortOptions, StoreItem } from '../interface/interfaces';
 import { useParams } from 'react-router-dom';
-import itemData from '../data/data';
+import { itemData } from '../data/data';
 import AppsIcon from '@mui/icons-material/Apps';
 import TableRowsIcon from '@mui/icons-material/TableRows';
 import TuneIcon from '@mui/icons-material/Tune';
@@ -9,6 +9,7 @@ import ShopFilter from '../components/ShopFilter/ShopFilter';
 import DisplayItemTile from '../components/DisplayItemTile/DisplayItemTile';
 import DisplayItemRow from '../components/DisplayItemRow/DisplayItemRow';
 import DisplayItemPopup from '../components/DisplayItemPopup/DisplayItemPopup';
+import Cart from '../components/Cart/Cart';
 import './css/Shop.css';
 
 export default function Shop() {
@@ -99,6 +100,7 @@ export default function Shop() {
             </div>
 
             <div className='shp_cart'>
+                <Cart />
             </div>
 
             <DisplayItemPopup item={selectedItem}/>
