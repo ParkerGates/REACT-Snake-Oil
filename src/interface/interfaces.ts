@@ -30,14 +30,11 @@ interface FilterForm {
     sales: boolean,
 }
 
-interface CardForm {
+interface CheckoutForm {
     name: string,
     cardNumber: string,
     expiration: string,
     cvv: string,
-}
-
-interface AddressForm {
     address: string,
     country: string,
     state: string,
@@ -49,4 +46,4 @@ type FilterFormOptions = 'miracle'|'natural'|'daily'|'oils'|'drops'|'creams'|'ru
 type SelectSortOptions = 'featured'|'alphabet'|'rated'|'priceLow'|'priceHigh';
 
 
-export type { StoreItem, AppContext, CartItem, FilterForm, CardForm, AddressForm, FilterFormOptions, SelectSortOptions, ItemAlias }
+export type { StoreItem, AppContext, CartItem, FilterForm, CheckoutForm, FilterFormOptions, SelectSortOptions, ItemAlias }

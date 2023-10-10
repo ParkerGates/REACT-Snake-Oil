@@ -85,9 +85,7 @@ const reducer = (state:AppContext, action: Action) => {
 
         case 'changeCheckoutStage':
             //checkoutStage: 'cart' | 'checkout'
-            console.log('hello: ', state.checkoutStage);
             newState = {...state, checkoutStage: action.checkoutStage};
-            console.log('goodbye: ', newState.checkoutStage);
             return newState;
 
 
