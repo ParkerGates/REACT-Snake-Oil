@@ -19,6 +19,7 @@ interface CartItem  {
 
 interface AppContext {
     cart: CartItem[];
+    checkoutStage: 'cart'|'checkout';
 }
 
 interface FilterForm {
@@ -29,8 +30,23 @@ interface FilterForm {
     sales: boolean,
 }
 
+interface CardForm {
+    name: string,
+    cardNumber: string,
+    expiration: string,
+    cvv: string,
+}
+
+interface AddressForm {
+    address: string,
+    country: string,
+    state: string,
+    city: string,
+    zip: string,
+}
+
 type FilterFormOptions = 'miracle'|'natural'|'daily'|'oils'|'drops'|'creams'|'rubs';
 type SelectSortOptions = 'featured'|'alphabet'|'rated'|'priceLow'|'priceHigh';
 
 
-export type { StoreItem, AppContext, CartItem, FilterForm, FilterFormOptions, SelectSortOptions, ItemAlias }
+export type { StoreItem, AppContext, CartItem, FilterForm, CardForm, AddressForm, FilterFormOptions, SelectSortOptions, ItemAlias }

@@ -7,10 +7,12 @@ interface Action {
     storeItem?: StoreItem;
     itemIndex?: Number;
     increment?: 1 | -1;
+    checkoutStage?: 'cart' | 'checkout';
 }
 
 const initialState: AppContext = {
-    cart: testCartData
+    cart: testCartData,
+    checkoutStage: 'cart',
 }
 
 let newState: AppContext;
@@ -22,7 +24,7 @@ const reducer = (state:AppContext, action: Action) => {
     switch(action.type) {
         case "addToCart":
             //storeItem: StoreItem
-            newState = {...state};
+            newState = {...state, checkoutStage:'cart'};
             newCart = [...state.cart];
 
             //Check is item exists in cart
@@ -42,7 +44,7 @@ const reducer = (state:AppContext, action: Action) => {
 
         case "removeFromCart":
             //itemIndex: Number
-            newState = {...state};
+            newState = {...state, checkoutStage:'cart'};
             newCart = [...state.cart];
             newCart.splice(Number(action.itemIndex), 1);
             newState.cart = [...newCart];
@@ -52,7 +54,7 @@ const reducer = (state:AppContext, action: Action) => {
 
         case "incrementCartItem":
             //itemIndex: Number, increment: -1 | 1
-            newState = {...state};
+            newState = {...state, checkoutStage:'cart'};
             newCart = [...state.cart];
 
             if ((state.cart[+action.itemIndex].amount + action.increment) <= 0) {
@@ -78,6 +80,14 @@ const reducer = (state:AppContext, action: Action) => {
             }
             newCart.splice(+itemIndex, 1,{amount: state.cart[+itemIndex].amount - 1, item: state.cart[+itemIndex].item});
             newState.cart = newCart;
+            return newState;
+
+
+        case 'changeCheckoutStage':
+            //checkoutStage: 'cart' | 'checkout'
+            console.log('hello: ', state.checkoutStage);
+            newState = {...state, checkoutStage: action.checkoutStage};
+            console.log('goodbye: ', newState.checkoutStage);
             return newState;
 
 

@@ -44,7 +44,7 @@ export default function Cart() {
                 );
             })}
             </div>
-            <button className='cart_checkout'>CHECK OUT</button>
+            <button className='cart_checkout' onClick={()=>{dispatch({type:'changeCheckoutStage', checkoutStage:'checkout'})}}>CHECK OUT</button>
         </div>
     );
 }
