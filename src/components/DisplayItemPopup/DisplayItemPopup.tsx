@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { useContextData } from '../../context/context';
 import { StoreItem } from '../../interface/interfaces';
@@ -12,8 +12,25 @@ interface Props {
 
 
 export default function DisplayItemPopup({item}: Props) {
-    const appData = useContextData(); 
+    const { appData, dispatch } = useContextData(); 
     const navigate = useNavigate();
+    const [lastAdded, setLastAdded] = useState<StoreItem|undefined>(undefined);
+
+
+    const addToCart = (storeItem: StoreItem) => {
+        dispatch({type:'addToCart',storeItem:item})
+        setLastAdded(storeItem);
+
+    }
+
+    useEffect(() => {
+        if (lastAdded !== undefined) {
+            const addCartTimout = setTimeout(() => {
+                setLastAdded(undefined);
+            }, 1500);
+        }
+    },[lastAdded]);
+
     if (item === undefined) { return <></> }
 
     return (
@@ -41,11 +58,15 @@ export default function DisplayItemPopup({item}: Props) {
                         </ul>
                     </div>
                 </div>
-                <button className='shp_popup_cart_btn'>
+                {   lastAdded?.alias !== item.alias ?
+                <button className='shp_popup_cart_btn' onClick={()=>{addToCart(item)}}>
                     <span>Add to cart </span>
                     <span className='shp_popup_big'><AddShoppingCartIcon fontSize='small' sx={{fontSize:"28px",position:'absolute',top:'8px',right:'22px'}}/></span>
                     <span className='shp_popup_medium'><AddShoppingCartIcon fontSize='small' sx={{fontSize:"20px",position:'absolute',top:'6px',right:'16px'}}/></span>
                 </button>
+                :
+                <div className='shp_popup_cart_btn shp_popup_added_title'>Added</div>
+                }
             </div>
         </div>
     );

@@ -1,0 +1,65 @@
+.order_placed {
+    position: relative;
+    height: calc(100vh - 3rem);
+}
+
+.order_placed_cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 6rem);
+}
+
+.order_placed_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(44, 44, 44);
+    padding: .5rem .6rem 0rem;
+}
+.order_placed_header_title {
+    font-size: 1.5rem;
+}
+.order_placed_header_hr {
+    height: 2px;
+    margin: .2rem .6rem 0px;
+    background-color: #b3b3b3;
+}
+
+
+.order_placed_truck_cont {
+    position: relative;
+    animation-name: drivingTruck;
+    animation-duration: .9s;
+    animation-iteration-count: infinite;
+}
+@keyframes drivingTruck {
+    0% {top:0px;}
+    50% {top: -4px;}
+    100% {top:0px}
+}
+
+
+
+.order_placed_colors {
+    margin: 0px;
+    padding: 0px;
+    rotate: -90deg;
+    height: 10rem;
+    width: .5rem;
+    margin-top: -5rem;
+}
+.order_placed_return_btn {
+    position: absolute;
+    bottom: 0rem;
+    width: calc(100% - 1.5rem);
+    height: 2.2rem;
+    margin: 1rem .8rem;
+    color: white;
+    font-family: 'Roboto';
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 2px;
+    background-color: #212121;
+}

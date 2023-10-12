@@ -19,7 +19,7 @@ interface CartItem  {
 
 interface AppContext {
     cart: CartItem[];
-    checkoutStage: 'cart'|'checkout';
+    checkoutStage: 'cart'|'checkout' | 'complete';
 }
 
 interface FilterForm {

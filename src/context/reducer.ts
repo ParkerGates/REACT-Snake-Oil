@@ -7,7 +7,7 @@ interface Action {
     storeItem?: StoreItem;
     itemIndex?: Number;
     increment?: 1 | -1;
-    checkoutStage?: 'cart' | 'checkout';
+    checkoutStage?: 'cart' | 'checkout' | 'complete';
 }
 
 const initialState: AppContext = {
@@ -81,10 +81,15 @@ const reducer = (state:AppContext, action: Action) => {
             newCart.splice(+itemIndex, 1,{amount: state.cart[+itemIndex].amount - 1, item: state.cart[+itemIndex].item});
             newState.cart = newCart;
             return newState;
+            
+
+        case 'clearCart':
+            newState = {...state, cart:[]}
+            return newState
 
 
         case 'changeCheckoutStage':
-            //checkoutStage: 'cart' | 'checkout'
+            //checkoutStage: 'cart' | 'checkout' | 'complete'
             newState = {...state, checkoutStage: action.checkoutStage};
             return newState;
 

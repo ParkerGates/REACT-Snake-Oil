@@ -19,8 +19,9 @@ export default function Checkout() {
     const { errors } = formState;
 
     const checkoutSubmit = (data, errors) => {
-        console.log('oo');
-        console.log(data, errors);
+        clearErrors()
+        dispatch({type:'changeCheckoutStage', checkoutStage:'complete'})
+        dispatch({type:'clearCart'})
     }
 
     const autoFillCheckout = () => {

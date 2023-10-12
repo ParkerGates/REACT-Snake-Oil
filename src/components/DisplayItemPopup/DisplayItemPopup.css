@@ -79,6 +79,11 @@
     border: none;
     border-radius: 3px;
 }
+.shp_popup_added_title {
+    width: 9.75rem;
+    text-align: center;
+    padding: 7px 2rem;
+}
 
 .shp_popup_big { display: inline-block;}
 .shp_popup_medium {display: none;}
