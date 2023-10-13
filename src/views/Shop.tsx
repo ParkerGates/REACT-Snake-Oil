@@ -9,7 +9,7 @@ import ShopFilter from '../components/ShopFilter/ShopFilter';
 import DisplayItemTile from '../components/DisplayItemTile/DisplayItemTile';
 import DisplayItemRow from '../components/DisplayItemRow/DisplayItemRow';
 import DisplayItemPopup from '../components/DisplayItemPopup/DisplayItemPopup';
-import Cart from '../components/Cart/Cart';
+import TransactionHead from '../components/TransactionHead/TranscactionHead';
 import './css/Shop.css';
 
 export default function Shop() {
@@ -100,7 +100,7 @@ export default function Shop() {
             </div>
 
             <div className='shp_cart'>
-                <Cart />
+                <TransactionHead />
             </div>
 
             <DisplayItemPopup item={selectedItem}/>

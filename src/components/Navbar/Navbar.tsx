@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import Cart from '../Cart/Cart';
 import { NavLink, useLocation, useParams } from 'react-router-dom';
 import { ShoppingCartOutlined, Menu }  from '@mui/icons-material';
-import './Navbar.css';
 import AspLogo from '../../svgs/AspLogo.svg';
+import TransactionHead from '../TransactionHead/TranscactionHead';
+import './Navbar.css';
 
 function NavBar() {
     const location = useLocation();
@@ -90,7 +90,7 @@ function NavBar() {
                             <ShoppingCartOutlined className='nav_cart' fontSize='large' sx={{color:'hsla(0, 0%, 0%, 0.7);', height:'1.8rem'}} />
                         </button>
                     </div>
-                    <Cart />
+                    <TransactionHead />
                 </div>
             </div>
 
