@@ -15,6 +15,10 @@ body {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
+  background-image: url('./svgs/Background.svg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
 .empty_btn {
