@@ -1,7 +1,7 @@
 /*Heading===========================================================================*/
 .hm_heading {
     position: relative;
-    height: 28rem;
+    height: 24rem;
     background: linear-gradient(to top right, rgb(20, 20, 20) 0%, rgb(39, 39, 39) 50%, rgb(20, 20, 20) 95%);
     overflow: hidden;
 }
@@ -18,15 +18,15 @@
 }
 .hm_heading_logo {
     position: absolute;
-    left: -20rem;
-    height: 18rem;
+    left: -14rem;
+    height: 15rem;
     z-index: 1;
 }
 .hm_heading_snake {
     position: absolute;
     right: -8rem;
-    bottom: -15rem;
-    height: 40rem;
+    bottom: -13rem;
+    height: 35rem;
     z-index: 1;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
@@ -40,7 +40,7 @@
 }
 .hm_scroll div {
     position: absolute;
-    top: .5rem;
+    top: .4rem;
     width: 100%;
 
     display: flex;
@@ -314,3 +314,58 @@
 .hm_footer_resume_project span { margin-bottom: .4rem; }
 .hm_colors_footer { height: 4rem; overflow: hidden; }
 .hm_colors_footer img { height: 4.1rem; width: 100%; }
+
+
+
+@media screen and (max-width: 1500px) {
+    .hm_heading { height: 22rem; }
+    .hm_heading_logo {
+        left: -10rem;
+        height: 13rem;
+    }
+    .hm_heading_snake {
+        right: -8rem;
+        bottom: -12rem;
+        height: 30rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .hm_heading { height: 18rem; }
+    .hm_heading_logo {
+        left: -12rem;
+        height: 11rem;
+    }
+    .hm_heading_snake {
+        right: -8rem;
+        bottom: -9rem;
+        height: 24rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .hm_heading { height: 15rem; }
+    .hm_heading_logo {
+        left: -10rem;
+        height: 8rem;
+    }
+    .hm_heading_snake {
+        right: -7rem;
+        bottom: -7rem;
+        height: 19rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .hm_heading { height: 14rem; }
+    .hm_heading_logo {
+        left: -8.5rem;
+        height: 6.5rem;
+        z-index: 2;
+    }
+    .hm_heading_snake {
+        right: -7rem;
+        bottom: -8.5rem;
+        height: 18rem;
+    }
+}
