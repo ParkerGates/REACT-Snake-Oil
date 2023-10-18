@@ -3,7 +3,7 @@
 }
 .ab_grid_cont {
     position: relative;
-    height: 115vh;
+    height: calc(100vh - 3.05rem);
     width: 25rem;
     min-width: 25rem;
     max-width: 25rem;
@@ -49,13 +49,13 @@
 .ab_faq_sect_text {
     font-size: 1.4rem;
     width: 100%;
-    margin: 2rem 6rem;
-    font-weight: 500;
+    margin: 1.3rem 6rem;
+    font-weight: 400;
 }
 
 @media screen and (max-width: 1300px) {
     .ab_grid_cont {
-        height: calc(141vh - 20vw);
+        height: 120vh;
         width: 20rem;
         min-width: 16rem;
         max-width: 16rem;
