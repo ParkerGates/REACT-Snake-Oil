@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import DarkDisplaySection from '../components/DarkDisplaySection/DarkDisplaySection';
 import DisplayItemCard from '../components/DisplayItemCard/DisplayItemCard';
 import Testimonials from '../components/Testimonials/Testimonials';
 import Grid1 from '../svgs/grid1.svg';
@@ -63,33 +64,40 @@ export default function Home() {
 
 
             <div className='hm_options'>
-                <div>
-                    <span className='hm_options_icon_cont'><HandshakeOutlinedIcon fontSize='large' sx={{color:'#202020', height:'2.2rem'}}/></span>
+                <div className="hm_options_btn_cont">
+                    <span className='hm_options_icon_cont'>
+                        <HandshakeOutlinedIcon
+                            fontSize='large'
+                            sx={{color:'#202020',fontSize:'1.7rem',marginBottom:"1px",width:'100%',textAlign:'center'}}
+                        />
+                    </span>
                     <Link className='hm_options_btn' to="/about">About</Link>
                 </div>
-                <div>
-                    <span className='hm_options_icon_cont'><InfoOutlinedIcon fontSize='large' sx={{color:'#202020', height:'2.2rem', marginBottom:"2px"}}/></span>
+                <div className='hm_options_btn_cont'>
+                    <span className='hm_options_icon_cont'>
+                        <InfoOutlinedIcon
+                            fontSize='large'
+                            sx={{color:'#202020',fontSize:'1.7rem',marginBottom:"1px",width:'100%',textAlign:'center'}}
+                        />
+                    </span>
                     <a className='hm_options_btn' href="#testimonial_section">Testimonials</a>
                 </div>
                 <div>
-                    <span className='hm_options_icon_cont'><AttachMoneyOutlinedIcon fontSize='large' sx={{color:'#202020', height:'2.2rem', margin:"0px 0px 2px 2px"}}/></span>
-                    <a className='hm_options_btn' href="#sales_section">Sales</a>
+                    <div className='hm_options_btn_cont'>
+                        <span className='hm_options_icon_cont'>
+                            <AttachMoneyOutlinedIcon
+                                fontSize='large'
+                                sx={{color:'#202020',fontSize:'1.7rem',marginBottom:"1px",width:'100%',textAlign:'center'}}
+                            />
+                        </span>
+                        <a className='hm_options_btn' href="#sales_section">Sales</a>
+                    </div>
                     <img className='hm_options_color' src={Colors} alt='colors' />
                 </div>
             </div>
 
 
-            <div className="hm_popular">
-                <div className="hm_item_heading_top">
-                    <div className='hm_item_heading_hr'></div>
-                    <div className="hm_item_heading_top_text">
-                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
-                        <h3>POPULAR ITEMS</h3>
-                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
-                    </div>
-                    <div className='hm_item_heading_hr'></div>
-                </div>
-
+            <DarkDisplaySection id='popular_section' name='popular items'>
                 <div className='hm_item_display'>
                     <Link to='/shop/dropBasket' className='text_dec_none'>
                         <DisplayItemCard imageName={itemImg['dropBasket']} itemName='Third Eye Drops' price='79.99'/>
@@ -101,17 +109,7 @@ export default function Home() {
                         <DisplayItemCard imageName={itemImg['dropPlate']} itemName='Covid Cure' price='64.99'/>
                     </Link>
                 </div>
-
-                <div className="hm_item_heading_top">
-                    <div className='hm_item_heading_hr'></div>
-                    <div className="hm_item_heading_top_text hm_item_heading_bottom_text">
-                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
-                        <h3>POPULAR ITEMS</h3>
-                        <div>POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS&nbsp;&nbsp;POPULAR ITEMS</div>
-                    </div>
-                    <div className='hm_item_heading_hr'></div>
-                </div>
-            </div>
+            </DarkDisplaySection>
 
 
             <div id="testimonial_section" className='hm_testimonials'>
@@ -135,17 +133,7 @@ export default function Home() {
             </div>
 
 
-            <div id="sales_section" className=" hm_popular hm_sales">
-                <div className="hm_item_heading_top">
-                    <div className='hm_item_heading_hr'></div>
-                    <div className="hm_item_heading_top_text">
-                        <div>SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES</div>
-                        <h3>SALES</h3>
-                        <div>SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES</div>
-                    </div>
-                    <div className='hm_item_heading_hr'></div>
-                </div>
-
+            <DarkDisplaySection id='sales_section' name='SALES'>
                 <div className='hm_item_display'>
                     <Link to='/sho/dropBasket' className='text_dec_none'>
                         <DisplayItemCard imageName={itemImg['dropBasket']} itemName='Third Eye Drops' price='99.99' sale='79.99' />
@@ -157,17 +145,7 @@ export default function Home() {
                         <DisplayItemCard imageName={itemImg['dropPlate']} itemName='Covid Cure' price='84.99' sale='64.99' />
                     </Link>
                 </div>
-
-                <div className="hm_item_heading_top">
-                    <div className='hm_item_heading_hr'></div>
-                    <div className="hm_item_heading_top_text hm_item_heading_bottom_text">
-                        <div>SALES&nbsp;&nbsp;&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES</div>
-                        <h3>SALES</h3>
-                        <div>SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES&nbsp;&nbsp;SALES</div>
-                    </div>
-                    <div className='hm_item_heading_hr'></div>
-                </div>
-            </div>
+            </DarkDisplaySection>
 
 
             <footer className='hm_footer'>
