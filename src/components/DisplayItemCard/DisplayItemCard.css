@@ -92,5 +92,18 @@
 }
 
 @media screen and (max-width: 550px) {
+    .display_item_card_image_sec { padding: .5rem .5rem 0rem; }
+    .display_item_card_colors {
+        top: -1rem; left: 1.5rem;
+        height: 2.5rem; width: .5rem;
+    }
+    .display_item_card_price_cont { padding: .3rem .8rem .3rem; }
+    .display_item_card:hover {
+        scale: 1.02;
+    }
 
+    .display_item_card { width: 12rem }
+    .display_item_card_name { font-size: 1.3rem; }
+    .display_item_card_price { font-size: 1.3rem; }
+    .display_item_card_price_cont { padding: .2rem .5rem .2rem; }
 }
