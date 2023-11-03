@@ -1,4 +1,5 @@
 import react from "react";
+import { useContextData } from "../../context/context";
 import FormatQuoteOutlinedIcon from '@mui/icons-material/FormatQuoteOutlined';
 import './Testimonials.css';
 
@@ -10,6 +11,7 @@ interface Props {
 }
 
 export default function Testimonials({image, name, location, children}: Props) {
+    const { screenW } = useContextData();
 
     return (
         <div className="testimonial_card">
@@ -20,11 +22,11 @@ export default function Testimonials({image, name, location, children}: Props) {
             </div>
             <div className="testimonial_card_quote">
                 <span className="testimonial_quotation_top">
-                    <FormatQuoteOutlinedIcon fontSize="large" sx={{color:"#E6E6E6", fontSize:"3.2rem"}}/>
+                    <FormatQuoteOutlinedIcon fontSize="large" sx={{color:"#E6E6E6", fontSize:`${550<screenW?'3.2':'2.2'}rem`}}/>
                 </span>
                 <div>{children}</div>
                 <span className="testimonial_quotation_bottom">
-                    <FormatQuoteOutlinedIcon fontSize="large" sx={{color:"#E6E6E6", fontSize:"3.2rem"}}/>
+                    <FormatQuoteOutlinedIcon fontSize="large" sx={{color:"#E6E6E6", fontSize:`${550<screenW?'3.2':'2.2'}rem`}}/>
                 </span>
             </div>
         </div>

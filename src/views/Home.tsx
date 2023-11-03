@@ -17,9 +17,7 @@ import HomeEllipseRight from '../svgs/HomeEllipseRight.svg';
 import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
-import RedditIcon from '@mui/icons-material/Reddit';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import ColorsDiv from '../components/ColorsDiv/ColorsDiv';
 import Colors from '../svgs/colors.svg';
 import './css/Home.css';
 
@@ -110,8 +108,10 @@ export default function Home() {
             <div id="testimonial_section" className='hm_testimonials'>
                 <h2>Testimonials</h2>
                 <div className="hm_testimonial_sub_heading">
-                    <img src={Colors} alt="colors" />
-                    <div>hear from our happy customers</div>
+                    <div className='testimonial_sect_colors'>
+                        <ColorsDiv direction='row' height='3px' />
+                    </div>
+                    <div className='testimonial_sect_tag'>hear from our happy customers</div>
                 </div>
 
                 <Testimonials image={Man1} name="Joe King" location="Chicago Illinois">
