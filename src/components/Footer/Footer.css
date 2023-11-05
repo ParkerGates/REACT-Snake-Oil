@@ -38,3 +38,17 @@
 .footer_resume_project span { margin-bottom: .4rem; }
 .colors_footer { height: 4rem; overflow: hidden; }
 .colors_footer img { height: 4.1rem; width: 100%; }
+
+
+@media screen and (max-width: 800px) {
+    .footer_outlinks { margin: 2.5rem 0rem 1.5rem; }
+    .footer_links { gap: .8rem; margin-bottom: 2.5rem; }
+    .footer_resume_project span { font-size: .85rem; }
+}
+
+@media screen and (max-width: 550px) {
+    .footer_outlinks { margin: 2.5rem 0rem 1.2rem; }
+    .footer_outlinks a { width: 3.08rem; height: 3rem; }
+    .footer_link { font-size: 1rem; }
+    .footer_resume_project span { font-size: .8rem; }
+}
