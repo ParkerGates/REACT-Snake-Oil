@@ -53,3 +53,76 @@
     position: absolute;
     bottom: -.5rem; right: 0px;
 }
+
+@media screen and (max-width: 1500px) {
+    .testimonial_card { padding: 1rem 2.5rem; }
+    .testimonial_card_person { margin-right: 2.5rem; }
+    .testimonial_card_person img { width: 9rem; }
+    .testimonial_card_quote { width: 28rem; font-size: 1.6rem; }
+    .testimonial_card_quote div { width: 26rem; }
+}
+
+@media screen and (max-width: 1100px) {
+    .testimonial_card { padding: .9rem 2rem; }
+    .testimonial_card_person { margin-right: 2rem; }
+    .testimonial_card_person img { width: 8rem; }
+    .testimonial_card_person_name {
+        margin-top: .4rem;
+        font-size: 1.1rem;
+    }
+    .testimonial_card_person_location {
+        margin-top: .2rem;
+        font-size: .8rem;
+    }
+    .testimonial_card_quote {
+        position: relative;
+        width: 25rem;
+        font-size: 1.3rem;
+    }
+    .testimonial_card_quote div { width: 22.5rem; }
+}
+
+@media screen and (max-width: 800px) {
+    .testimonial_card { padding: .7rem 1.5rem .6rem; }
+    .testimonial_card_person { margin-right: 1.5rem; }
+    .testimonial_card_person img { width: 7.5rem; }
+    .testimonial_card_person_name {
+        margin-top: .2rem;
+        font-size: 1rem;
+    }
+    .testimonial_card_person_location {
+        margin-top: .1rem;
+        font-size: .8rem;
+    }
+    .testimonial_card_quote {
+        position: relative;
+        width: 19rem;
+        font-size: 1.1rem;
+    }
+    .testimonial_card_quote div {
+        position: relative;
+        top: .3rem;
+        width: 18rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .testimonial_card {
+        flex-direction: column;
+        padding: .8rem .5rem 1rem;
+        margin-bottom: 1.2rem;
+    }
+    .testimonial_card_person {
+        margin-bottom: .5rem;
+    }
+    .testimonial_card_quote {
+        position: relative;
+        width: 14.5rem;
+        font-size: 1rem;
+    }
+    .testimonial_card_quote div {
+        position: relative;
+        top: .3rem;
+        width: 10.5rem;
+    }
+}
