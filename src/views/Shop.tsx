@@ -1,4 +1,5 @@
 import React, { useState} from 'react';
+import { useContextData } from '../context/context';
 import { FilterForm, SelectSortOptions, StoreItem } from '../interface/interfaces';
 import { useParams } from 'react-router-dom';
 import { itemData } from '../data/data';
@@ -10,9 +11,11 @@ import DisplayItemTile from '../components/DisplayItemTile/DisplayItemTile';
 import DisplayItemRow from '../components/DisplayItemRow/DisplayItemRow';
 import DisplayItemPopup from '../components/DisplayItemPopup/DisplayItemPopup';
 import TransactionHead from '../components/TransactionHead/TranscactionHead';
+import { chgOnSm, chgOnVal } from '../utility/screenSize';
 import './css/Shop.css';
 
 export default function Shop() {
+    const { screenW } = useContextData();
     const { details } = useParams();
     const [orgSort, setOrgSort] = useState<SelectSortOptions>('featured');
     const [orgLayout, setOrgLayout] = useState<"tile"|"row">("tile");
@@ -74,17 +77,38 @@ export default function Shop() {
             <div className='shp_display'>
                 <div className='shp_display_org'>
                     <div className="shp_display_org_layout_filter">
-                        <button onClick={() => {openFilter()}} className="shp_filter_toggle"><TuneIcon fontSize='large' sx={{color:'#696969', marginRight:'1rem'}}/></button>
-                        <button onClick={() => {setOrgLayout("tile")}}><AppsIcon fontSize='large' sx={orgLayout === "tile" ? {color:'#696969'} : {color:'#CACACA'}} /></button>
-                        <button onClick={() => {setOrgLayout("row")}}><TableRowsIcon fontSize='large' sx={orgLayout === "tile" ? {color:'#CACACA'} : {color:'#696969'}} /></button>
+                        <button
+                            onClick={() => {openFilter()}}
+                            className="shp_filter_toggle shp_display_org_btn">
+                            <TuneIcon
+                                fontSize='large'
+                                sx={{color:'#696969', fontSize:chgOnSm(screenW,550,'1.8rem','2.2rem')}}/>
+                        </button>
+                        <button
+                            onClick={() => {setOrgLayout("tile")}}
+                            className='shp_display_org_btn'>
+                            <AppsIcon
+                                fontSize='large'
+                                sx={{color:chgOnVal(orgLayout,'tile','#696969','#CACACA'), fontSize:chgOnSm(screenW,550,'1.8rem','2.2rem')}}
+                            />
+                        </button>
+                        <button
+                            onClick={() => {setOrgLayout("row")}}
+                            className='shp_display_org_btn'>
+                            <TableRowsIcon
+                                fontSize='large'
+                                sx={{color:chgOnVal(orgLayout,'row','#696969','#CACACA'), fontSize:chgOnSm(screenW,550,'1.8rem','2.2rem')}}
+                            />
+                        </button>
                     </div>
+
                     <div className='shp_display_org_sort'>
                         <span>Sort by</span>
                         <select value={orgSort} onChange={(e)=>{setOrgSort(e.target.value as SelectSortOptions)}}>
                             <option value='featured'>Featured</option>
                             <option value='rated'>Highest Rated</option>
-                            <option value='priceLow'>Price: Low to High</option>
-                            <option value='priceHigh'>Price: High to Low</option>
+                            <option value='priceLow'>Price: Low - High</option>
+                            <option value='priceHigh'>Price: High - Low</option>
                             <option value='alphabet'>Alphabetically</option>
                         </select>
                     </div>
