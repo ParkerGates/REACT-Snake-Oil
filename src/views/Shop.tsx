@@ -82,11 +82,11 @@ export default function Shop() {
                             className="shp_filter_toggle shp_display_org_btn">
                             <TuneIcon
                                 fontSize='large'
-                                sx={{color:'#696969', fontSize:chgOnSm(screenW,550,'1.8rem','2.2rem')}}/>
+                                sx={{color:'#696969', fontSize:chgOnSm(screenW,600,'1.8rem','2.2rem')}}/>
                         </button>
                         <button
                             onClick={() => {setOrgLayout("tile")}}
-                            className='shp_display_org_btn'>
+                            className='shp_display_org_btn shp_display_org_btn_layout'>
                             <AppsIcon
                                 fontSize='large'
                                 sx={{color:chgOnVal(orgLayout,'tile','#696969','#CACACA'), fontSize:chgOnSm(screenW,550,'1.8rem','2.2rem')}}
@@ -94,7 +94,7 @@ export default function Shop() {
                         </button>
                         <button
                             onClick={() => {setOrgLayout("row")}}
-                            className='shp_display_org_btn'>
+                            className='shp_display_org_btn shp_display_org_btn_layout'>
                             <TableRowsIcon
                                 fontSize='large'
                                 sx={{color:chgOnVal(orgLayout,'row','#696969','#CACACA'), fontSize:chgOnSm(screenW,550,'1.8rem','2.2rem')}}
@@ -115,10 +115,10 @@ export default function Shop() {
                 </div>
                 <div className='shp_display_org_hr'></div>
 
-                <div className={orgLayout === 'tile' ? 'shp_display_tile' : 'shp_display_row'}>
+                <div className={(orgLayout === 'tile' || screenW <= 600) ? 'shp_display_tile' : 'shp_display_row'}>
                     { itemDataFiltered.map((item) => {
-                        if (orgLayout === "tile") {return <DisplayItemTile key={item.alias} item={item} />}
-                        if (orgLayout === "row") {return <DisplayItemRow key={item.alias} item={item} />}
+                        if (orgLayout === "tile" || screenW <= 600) {return <DisplayItemTile key={item.alias} item={item} />}
+                        else if (orgLayout === "row") {return <DisplayItemRow key={item.alias} item={item} />}
                     }) }
                 </div>
             </div>

@@ -23,7 +23,7 @@
     font-size: 2.2rem;
 }
 .shp_row_description {
-    font-size: 1.4rem;
+    font-size: 1.34rem;
     margin-top: 1rem;
 }
 .shp_row_footer {
@@ -50,3 +50,20 @@
 }
 .shp_row_btns:last-child span { padding-right: 1.3rem; }
 .shp_row_added_title { width: 7.4rem; }
+
+@media screen and (max-width: 850px) {
+    .shp_row_img { width: 12rem; }
+    .shp_row_title { font-size: 1.8rem; }
+    .shp_row_price { font-size: 1.6rem; }
+    .shp_row_description {
+        font-size: 1.1rem;
+        margin-top: .5rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .shp_row_img { width: 11rem; }
+    .shp_row_title { font-size: 1.5rem; }
+    .shp_row_price { font-size: 1.3rem; }
+    .shp_row_description { font-size: 1.05rem; }
+}

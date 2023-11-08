@@ -137,6 +137,11 @@
     .shp_display_tile { grid-template-columns: auto auto; }
 }
 
+@media screen and (max-width: 600px) {
+    .shp_display_org_btn_layout { display: none;}
+    .shp_display_org_sort span { display: none; }
+}
+
 @media screen and (max-width: 550px) {
     .shp_display_tile {
         grid-template-columns: auto;
@@ -144,5 +149,4 @@
     }
     .shp_filter_toggle { margin-right: .2rem; }
     .shp_display_org_sort select { margin-left: .5rem; }
-    .shp_display_org_sort span { display: none; }
 }
