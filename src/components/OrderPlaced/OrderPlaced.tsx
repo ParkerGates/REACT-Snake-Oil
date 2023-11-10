@@ -19,7 +19,7 @@ export default function OrderPlaced() {
                 </span>
                 <img className='order_placed_colors' src={Colors} alt='colors' />
             </div>
-            <button className='order_placed_return_btn' onClick={()=>{dispatch({type:'changeCheckoutStage', checkoutStage:'cart'})}}>TO CART</button>
+            <button className='order_placed_return_btn' onClick={()=>{dispatch({type:'changeCheckoutStage', checkoutStage:'cart'})}}>BACK TO CART</button>
         </div>
     );
 }
