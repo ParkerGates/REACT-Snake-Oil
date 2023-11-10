@@ -17,16 +17,18 @@
     color: #303030;
 }
 .shp_display_org_layout_filter { display: flex; }
-.shp_display_org button {
+.shp_display_org_btn {
     margin: 0rem; padding: 0rem;
     border:none;
     background-color: transparent;
 }
 .shp_filter_toggle {
     display: none;
+    margin-right: 1rem;
 }
 .shp_display_org_sort span { color: #303030; font-weight: 300; }
 .shp_display_org_sort select {
+    width: 8.2rem;
     color: #303030;
     font-family: 'Roboto';
     font-weight: 300;
@@ -46,7 +48,7 @@
 /*Display Tile===================================================*/
 .shp_display_tile {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     justify-content: center;
     column-gap: 3.5rem;
     row-gap: 1rem;
@@ -87,6 +89,13 @@
     border-left: 1px solid hsla(0, 0%, 0%, 0.50);
 }
 
+@media screen and (max-width: 1650px) {
+    .shp_display_tile {
+        grid-template-columns: auto auto auto;
+    }
+    
+}
+
 @media screen and (max-width: 1500px) {
     .shp_filter {
         position: fixed;
@@ -108,9 +117,7 @@
 }
 
 @media screen and (max-width: 1100px) {
-    .shp_display {
-        margin: 0px 2rem;
-    }
+    .shp_display { margin: 0px 0rem; }
     .shp_cart {
         position: fixed;
         top: 0px;
@@ -118,4 +125,28 @@
         height: 100vw;
         background-color: aquamarine;
     }
+    .shp_display_org { margin: .5rem .5rem 0rem; }
+    .shp_display_org_hr { margin: .5rem 0rem 0rem; }
+}
+
+@media screen and (max-width: 1000px) { 
+    .shp_display_tile { column-gap: 1rem; row-gap: .5rem; }
+}
+
+@media screen and (max-width: 800px) {
+    .shp_display_tile { grid-template-columns: auto auto; }
+}
+
+@media screen and (max-width: 600px) {
+    .shp_display_org_btn_layout { display: none;}
+    .shp_display_org_sort span { display: none; }
+}
+
+@media screen and (max-width: 550px) {
+    .shp_display_tile {
+        grid-template-columns: auto;
+        width: 100%;
+    }
+    .shp_filter_toggle { margin-right: .2rem; }
+    .shp_display_org_sort select { margin-left: .5rem; }
 }

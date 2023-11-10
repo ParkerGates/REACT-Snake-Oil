@@ -46,11 +46,11 @@ export default function DisplayItemPopup({item}: Props) {
                         <div className='shp_popup_big'><Stars rating={item.stars} size={1.8}/></div>
                         <div className='shp_popup_medium'><Stars rating={item.stars} size={1.2}/></div>
                     </div>
-                    <div>
+                    <div className='shp_popup_details_list_cont'>
                         <div className='shp_popup_price'>${item.price}</div>
                         <div className='shp_popup_subsec'>Description:</div>
                         <div className='shp_popup_description'>{item.description}</div>
-                        <div className='shp_popup_subsec'>Details:</div>
+                        <div className='shp_popup_subsec shp_popup_details_title'>Details:</div>
                         <ul className='shp_popup_details_list'>
                             {item.details.map((detail, i)=>{
                                 return <li key={i} className='shp_popup_details_list_item'>{detail}</li>   
@@ -61,8 +61,8 @@ export default function DisplayItemPopup({item}: Props) {
                 {   lastAdded?.alias !== item.alias ?
                 <button className='shp_popup_cart_btn' onClick={()=>{addToCart(item)}}>
                     <span>Add to cart </span>
-                    <span className='shp_popup_big'><AddShoppingCartIcon fontSize='small' sx={{fontSize:"28px",position:'absolute',top:'8px',right:'22px'}}/></span>
-                    <span className='shp_popup_medium'><AddShoppingCartIcon fontSize='small' sx={{fontSize:"20px",position:'absolute',top:'6px',right:'16px'}}/></span>
+                    <span className='shp_popup_big shop_popup_cart_icon_big'><AddShoppingCartIcon fontSize='small' sx={{fontSize:"28px",position:'absolute',top:'8px',right:'22px'}}/></span>
+                    <span className='shp_popup_medium shp_popup_cart_icon_medium'><AddShoppingCartIcon fontSize='small' sx={{fontSize:"20px",position:'absolute',top:'6px',right:'16px'}}/></span>
                 </button>
                 :
                 <div className='shp_popup_cart_btn shp_popup_added_title'>Added</div>
