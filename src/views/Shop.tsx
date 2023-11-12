@@ -26,13 +26,15 @@ export default function Shop() {
         priceMax: undefined,
         sales: false,
     });
+    console.log(filterForm);
     const selectedItem = itemData.find((item)=> item.alias === details);
 
     let itemDataFiltered: StoreItem[] = itemData.filter((item) => {
         let isRemedy = Boolean(filterForm.remedy.filter((f) => f === item.remedy).length) || filterForm.remedy.length === 0;
         let isForm = Boolean(filterForm.form.filter((f) => f === item.form).length) || filterForm.form.length === 0;
         let isPrice = (filterForm.priceMin === undefined || item.price >= filterForm.priceMin) && (filterForm.priceMax === undefined || item.price <= filterForm.priceMax);
-        if (isRemedy === true && isForm === true && isPrice === true) { return item }
+        let isSale = filterForm.sales === false || (filterForm.sales === true && item.sale !== false);
+        if (isRemedy === true && isForm === true && isPrice === true && isSale === true) { return item }
     });
     const itemDataFilteredNoSort: StoreItem[] = [...itemDataFiltered]
 
