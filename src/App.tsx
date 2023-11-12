@@ -1,4 +1,5 @@
-import {Routes, BrowserRouter, Link, Route} from 'react-router-dom';
+import {Routes, BrowserRouter, Route} from 'react-router-dom';
+import ScrollToTop from './utility/scrollToTop';
 import Navbar from './components/Navbar/Navbar';
 import Home from './views/Home';
 import About from './views/About';
@@ -8,8 +9,9 @@ import './App.css';
 export default function App() {
 
   return (
-    <div className="scrollCutOff">
+    <div id='page_body' className="scrollCutOff">
     <BrowserRouter>
+    <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
