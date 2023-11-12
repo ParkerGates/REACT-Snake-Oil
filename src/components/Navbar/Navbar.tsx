@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
-import { NavLink, useLocation, useParams } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { ShoppingCartOutlined, Menu }  from '@mui/icons-material';
 import AspLogo from '../../svgs/AspLogo.svg';
 import TransactionHead from '../TransactionHead/TranscactionHead';
+import Background from '../../svgs/Background.svg';
 import './Navbar.css';
 
 function NavBar() {
     const location = useLocation();
-    const params = useParams();
     const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
 
     const toggleSideNav = (id: string) => {
@@ -74,6 +74,7 @@ function NavBar() {
                 <div id='background_nav' onClick={closeSideNav} className='side_nav_background'></div>
 
                 <div id='nav_left' className='side_nav_left'>
+                    <img className='side_nav_bg' src={Background} alt='background gradient' />
                     <div className='nav_item_mobile'>
                         <button onClick={() => {toggleSideNav('nav_left')}} className='empty_btn nav_menu'>
                             <Menu fontSize='large' sx={{color:'hsla(0, 0%, 0%, 0.7);', height:'1.8rem'}}/>
@@ -85,6 +86,7 @@ function NavBar() {
                 </div>
 
                 <div id='nav_right' className="side_nav_right">
+                    <img className='side_nav_bg' src={Background} alt='background gradient' />
                     <div className='nav_item_mobile align_right '>
                         <button onClick={() => {toggleSideNav('nav_right')}} className='empty_btn nav_menu nav_cart_side_nav'>
                             <ShoppingCartOutlined className='nav_cart' fontSize='large' sx={{color:'hsla(0, 0%, 0%, 0.7);', height:'1.8rem'}} />
