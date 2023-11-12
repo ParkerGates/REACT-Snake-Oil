@@ -91,6 +91,7 @@
     font-size: 1.1rem;
     color: white;
     background-color: #ec4a34;
+    text-align: center;
     z-index: 2;
 }
 .shp_tile_sale_price_color { color: #e75805 }

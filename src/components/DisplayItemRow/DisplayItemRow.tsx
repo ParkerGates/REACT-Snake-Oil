@@ -30,6 +30,7 @@ export default function DisplayItemRow({item}: Props) {
 
     return (
         <div className="shp_row" key={item.name} >
+            { item.sale !== false && <div className='shp_row_sale_tag'>-{Math.round((1 - item.sale) * 100)}%</div>}
             <img className="shp_row_img" src={item.image} alt={item.name} />
             <div className="shp_row_details_cont">
                 <div className="shp_row_header">
@@ -38,7 +39,16 @@ export default function DisplayItemRow({item}: Props) {
                 </div>
                 <div className="shp_row_description">{item.description}</div>
                 <div className="shp_row_footer">
-                    <div className='shp_row_price'>${item.price}</div>
+                    <div>
+                        { item.sale !== false ?
+                            <>
+                                <span className='shp_row_sale_old_price'>${item.price}</span>
+                                <span className='shp_row_price shp_row_sale_price_color'>${ Math.round(item.price * item.sale * 100) / 100}</span>
+                            </> 
+                            :
+                            <span className='shp_row_price'>${item.price}</span>
+                        }
+                    </div>
                     <div className="shp_row_btns">
                         <Link to={'/shop/'+ item.alias}><button>Details</button></Link>
                         {   lastAdded?.alias !== item.alias ?
