@@ -1,11 +1,8 @@
-import React from 'react';
-import { useContextData } from '../context/context';
 import Grid1 from '../svgs/grid1.svg';
 import Grid2 from '../svgs/grid2.svg';
 import './css/About.css';
 
 export default function About() {
-    const appData = useContextData(); 
 
     return(
         <div className='about'>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import DarkDisplaySection from '../components/DarkDisplaySection/DarkDisplaySection';
 import FlexToCarousel from '../components/FlexToCarousel/FlexToCarousel';
