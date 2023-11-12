@@ -81,6 +81,14 @@ export default function ShopFilter({form, setForm}: Props) {
                     <CheckboxArray name={"rubs"} catagory={"form"} form={form} changeForm={setForm} />
                     <label className='filter_checkbox_name' >Rubs</label>
                 </div>
+                <div className='filter_checkbox_sec'>
+                    <CheckboxArray name={"pills"} catagory={"form"} form={form} changeForm={setForm} />
+                    <label className='filter_checkbox_name' >Pills</label>
+                </div>
+                <div className='filter_checkbox_sec'>
+                    <CheckboxArray name={"powders"} catagory={"form"} form={form} changeForm={setForm} />
+                    <label className='filter_checkbox_name' >Powders</label>
+                </div>
             </div>
 
 

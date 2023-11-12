@@ -1,4 +1,5 @@
 .shp_tile {
+    position: relative;
     width: 14.5rem;
     text-align: center;
     margin-bottom: .8rem;
@@ -8,9 +9,11 @@
     position: relative;
     border: 1px solid #949090;
     padding: .5rem;
+    padding-bottom: .3rem;
 }
 .shp_tile_img {
-    width: 100%;
+    width: 98%;
+    border: 1px solid rgb(218, 218, 218);
 }
 .shp_tile_interaction {
     opacity: 0;
@@ -23,7 +26,7 @@
     left: 0rem;
     background-color: #30303047;
     width: 14.5rem;
-    height: 14.8rem;
+    height: 14.45rem;
     margin:0px;
     color: white;
 }
@@ -79,12 +82,34 @@
     font-weight: 400;
 }
 
+.shp_tile_sale_tag {
+    position: absolute;
+    top: 0px;
+    left:0px;
+    width: 3.8rem;
+    padding: .3rem 0rem;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #ec4a34;
+    z-index: 2;
+}
+.shp_tile_sale_price_color { color: #e75805 }
+.shp_tile_sale_old_price {
+    color: #797979;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-right: 1rem;
+    text-decoration: line-through;
+}
+
 @media screen and (max-width: 1000px) {
     .shp_tile_img_cont {
         width: 12.5rem;
         height: 12.5rem;
         padding: .4rem;
+        padding-bottom: .4rem;
     }
+    .shp_tile_img { width: 99.5%; }
     .shp_tile_interaction {
         width: 13.3rem;
         height: 13.3rem;
@@ -93,4 +118,5 @@
     .shp_tile_title { font-size: 1.5rem; margin: .2rem 0px .5px; }
     .shp_tile_price { font-size: 1.3rem; }
     .shp_title_stars { font-size: .5rem; }
+    .shp_tile_sale_old_price { font-size: 1.3rem; margin-right: .8rem; }
 }

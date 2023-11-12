@@ -10,6 +10,7 @@ interface StoreItem {
     details: string[];
     remedy: "miracle"|'natural'|'daily';
     form: 'creams'|'drops'|'oils'|'pills'|'powders'|'rubs';
+    sale: false | number;
 }
 
 interface CartItem  {

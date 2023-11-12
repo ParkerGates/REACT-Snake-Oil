@@ -32,6 +32,7 @@ export default function DisplayItemTile({item}: Props) {
 
     return (
         <div className='shp_tile' key={item.name}>
+            { item.sale !== false && <div className='shp_tile_sale_tag'>-{Math.round((1 - item.sale) * 100)}%</div>}
             <div className='shp_tile_img_cont'>
                 <img className="shp_tile_img" src={item.image} alt={item.name} />
                 <div className='shp_tile_interaction' onClick={(e)=>{e.target === e.currentTarget && navigate('/shop/'+item.alias)}}>
@@ -48,7 +49,16 @@ export default function DisplayItemTile({item}: Props) {
             <div onClick={()=>{navigate('/shop/'+item.alias)}}>
                 <div className='shp_tile_title'>{item.name}</div>
                 <div className='shp_tile_stars'><Stars rating={item.stars} /></div>
-                <div className='shp_tile_price'>${item.price}</div>
+                <div>
+                { item.sale !== false ?
+                     <>
+                        <span className='shp_tile_sale_old_price'>${item.price}</span>
+                        <span className='shp_tile_price shp_tile_sale_price_color'>${ Math.round(item.price * item.sale * 100) / 100}</span>
+                    </> 
+                    :
+                    <span className='shp_tile_price'>${item.price}</span>
+                }
+                </div>
             </div>
     </div>
     );
