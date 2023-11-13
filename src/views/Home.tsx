@@ -129,9 +129,9 @@ export default function Home() {
 
             <DarkDisplaySection id='sales_section' name='SALES'>
                 <FlexToCarousel
-                    item1={<DisplayItemCard imageName='dropBasket' itemName='Third Eye Drops' price='99.99' sale='79.99' />}
-                    item2={<DisplayItemCard imageName='creamGreen' itemName='Quick Heal Rub' price='74.99' sale='54.99' />}
-                    item3={<DisplayItemCard imageName='dropPlate' itemName='Covid Cure' price='84.99' sale='64.99' />}
+                    item1={<DisplayItemCard imageName='dropPlant' itemName='Hear Again' price='99.99' sale='79.99' />}
+                    item2={<DisplayItemCard imageName='oilPurple' itemName='Resonate ii' price='75.99' sale='56.99' />}
+                    item3={<DisplayItemCard imageName='powderBrown' itemName='Brown Powder' price='49.99' sale='44.99' />}
                 />
             </DarkDisplaySection>
 

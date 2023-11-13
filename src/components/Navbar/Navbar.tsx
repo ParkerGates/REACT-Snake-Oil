@@ -57,8 +57,8 @@ function NavBar() {
             <div className='nav_mid_sec'>
                 <div onClick={closeSideNav}>
                     <NavLink to="/" className='nav_item'>Home</NavLink>
-                    <NavLink to="/about" className='nav_item'>About</NavLink>
                     <NavLink to="/shop" className='nav_item'>Shop</NavLink>
+                    <NavLink to="/about" className='nav_item'>About</NavLink>
                 </div>
             </div>
             <div className={'nav_right_sec ' + (location.pathname === '/shop' && (screenWidth||window.innerWidth) >= 1100 && 'nav_right_sec_shp_lg')}>
