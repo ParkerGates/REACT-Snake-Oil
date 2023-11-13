@@ -44,6 +44,8 @@
 .cart_item_price {
     margin-left: 5px;
 }
+.cart_sale_old_price { text-decoration: line-through; color: #797979; }
+.cart_item_price_color { color: #e75805 }
 
 .cart_item_interact {
     position: relative;

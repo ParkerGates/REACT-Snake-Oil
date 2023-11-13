@@ -6,13 +6,16 @@ import './Cart.css';
 
 export default function Cart() {
     const { appData, dispatch } = useContextData();
-    const cartPriceTotal = Math.round(100 * (appData.cart.reduce((total, cartItem)=>(total + (cartItem.item.price * cartItem.amount)),0))) / 100;
+    const cartPriceTotal = Math.round(100 * (appData.cart.reduce((total, cartItem)=>{
+        if (cartItem.item.sale !== false) { return total + (Math.round(100*(cartItem.item.price * cartItem.item.sale)) / 100 * cartItem.amount) }
+        return total + (cartItem.item.price * cartItem.amount)
+    },0))) / 100;
 
     return (
         <div className='cart'>
             <div className='cart_header'>
                 <div className='cart_header_title'>CART</div>
-                { appData.cart.length !== 0 && <div className='cart_header_price'>${cartPriceTotal}</div> }
+                { appData.cart.length !== 0 && <div className='cart_header_price'>${cartPriceTotal.toFixed(2)}</div> }
             </div>
             <div className='cart_header_hr'></div>
 
@@ -25,7 +28,16 @@ export default function Cart() {
                                 <img className='cart_item_img' src={cartItem.item.image} alt={cartItem.item.alias} />
                                 <div className='cart_item_info'>
                                     <div className='cart_item_name'>{cartItem.item.name}</div>
-                                    <div className='cart_item_price'>{cartItem.item.price}</div>
+                                    <span>
+                                    { cartItem.item.sale !== false ?
+                                        <>
+                                            <span className='cart_sale_old_price cart_item_price'>${cartItem.item.price}</span>
+                                            <span className='cart_item_price cart_item_price_color'>${ Math.round(cartItem.item.price * cartItem.item.sale * 100) / 100}</span>
+                                        </> 
+                                        :
+                                        <span className='cart_item_price'>${cartItem.item.price}</span>
+                                    }
+                                    </span>
                                     <div className='cart_item_interact'>
                                         <div className='cart_item_interact_amount'>{cartItem.amount}</div>
                                         <div className='cart_item_interact_increment'>

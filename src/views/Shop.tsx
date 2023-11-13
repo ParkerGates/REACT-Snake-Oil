@@ -26,7 +26,6 @@ export default function Shop() {
         priceMax: undefined,
         sales: false,
     });
-    console.log(filterForm);
     const selectedItem = itemData.find((item)=> item.alias === details);
 
     let itemDataFiltered: StoreItem[] = itemData.filter((item) => {

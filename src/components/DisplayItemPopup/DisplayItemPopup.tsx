@@ -36,6 +36,7 @@ export default function DisplayItemPopup({item}: Props) {
     return (
         <div className="shp_popup_cont" onClick={(e)=>{e.target === e.currentTarget && navigate('/shop')}}>
             <div className='shp_popup'>
+            { item.sale !== false && <div className='shp_popup_sale_tag'>-{Math.round((1 - item.sale) * 100)}%</div>}
                 <div className='shp_popup_img_sec'>
                     <img className='shp_popup_img' src={item.image} alt={item.alias} />
                     <div className='shp_popup_img_legalese'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
@@ -47,7 +48,16 @@ export default function DisplayItemPopup({item}: Props) {
                         <div className='shp_popup_medium'><Stars rating={item.stars} size={1.2}/></div>
                     </div>
                     <div className='shp_popup_details_list_cont'>
-                        <div className='shp_popup_price'>${item.price}</div>
+                        <div>
+                        { item.sale !== false ?
+                            <>
+                                <span className='shp_popup_price shp_popup_sale_old_price'>${item.price}</span>
+                                <span className='shp_popup_price shp_popup_sale_price_color'>${ Math.round(item.price * item.sale * 100) / 100}</span>
+                            </> 
+                            :
+                            <span className='shp_popup_price'>${item.price}</span>
+                        }
+                        </div>
                         <div className='shp_popup_subsec'>Description:</div>
                         <div className='shp_popup_description'>{item.description}</div>
                         <div className='shp_popup_subsec shp_popup_details_title'>Details:</div>

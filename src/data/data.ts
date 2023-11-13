@@ -137,14 +137,14 @@ const itemData: StoreItem[] = [
     {
         name: "Resonate ii",
         alias: "oilPurple",
-        price: 69.99,
+        price: 75.99,
         stars: 5,
         image: itemImg["oilPurple"],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         details: ["aaa","bbb","ccc"],
         remedy: "daily",
         form: "oils",
-        sale: false,
+        sale: .75,
     },
     {
         name: "Anger Override ii",
@@ -302,14 +302,14 @@ const testCartData: CartItem[] = [
         item: {
             name: "Quick Heal Cream",
             alias: "creamPink",
-            price: 89.99,
+            price: 99.99,
             stars: 5,
             image: itemImg["creamPink"],
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
             details: ["aaa","bbb","ccc"],
             remedy: "natural",
             form: "creams",
-            sale: false,
+            sale: .9,
         }
     },
     {
