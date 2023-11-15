@@ -1,5 +1,7 @@
 .filter_cont {
     padding: 2rem 2rem 1rem;
+    height: calc(100vh - 6.3rem);
+    overflow-y: scroll;
 }
 
 .filter_sec_cont {
@@ -28,14 +30,16 @@
 }
 
 .filter_price_input {
-    width: 3.6rem;
+    width: 3.45rem;
     height: 1.5rem;
-    margin: 2px 8px 0px 7px;
+    margin: 2px 8px 0px 8px;
 }
+.filter_price_input_max { margin-right: 0px; }
+
 .filter_price_btn_cont {
     display: flex;
     justify-content: space-between;
-    width: 11.1rem;
+    width: 10.9rem;
     margin: .5rem 1px 0px 5px;
 }
 .filter_price_btn_cont button {
@@ -62,4 +66,8 @@
 
 .filter_price_checkbox {
     margin-top: 1rem;
+}
+
+@media screen and (max-width: 1500px) {
+    .filter_cont { height: calc(100vh - 3.5rem); }
 }
