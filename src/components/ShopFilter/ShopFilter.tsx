@@ -92,14 +92,14 @@ export default function ShopFilter({form, setForm}: Props) {
             </div>
 
 
-            <div  className={section.price ? 'filter_sec_cont' : "filter_sec_cont filter_sec_cont_collapsed"}>
+            <div className={section.price ? 'filter_sec_cont' : "filter_sec_cont filter_sec_cont_collapsed"} style={{marginBottom:'0px'}}>
                 <div onClick={()=>toggleSection('price')} className="filter_title">
                     <PlusMinus status={section.price} />
                     <div className='filter_title_text'>Price</div>
                 </div>
                 <input className='filter_price_input' value={priceLow} type="text" maxLength={3} placeholder='$' autoComplete="off" onChange={e=>setPriceLow(e.target.value.replace(/\D/g, ''))} />
                 <span>to</span>
-                <input className='filter_price_input' value={priceHigh} type="text" maxLength={3} placeholder='$$$' autoComplete="off" onChange={e=>setPriceHigh(e.target.value.replace(/\D/g, ''))} />
+                <input className='filter_price_input filter_price_input_max' value={priceHigh} type="text" maxLength={3} placeholder='$$$' autoComplete="off" onChange={e=>setPriceHigh(e.target.value.replace(/\D/g, ''))} />
                 <div className='filter_price_btn_cont'>
                     <button onClick={onApply}>Apply</button>
                 </div>
