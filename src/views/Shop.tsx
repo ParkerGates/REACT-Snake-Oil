@@ -1,8 +1,8 @@
-import React, { useState} from 'react';
+import { useState, useEffect } from 'react';
 import { useContextData } from '../context/context';
 import { FilterForm, SelectSortOptions, StoreItem } from '../interface/interfaces';
 import { useParams } from 'react-router-dom';
-import { itemData } from '../data/data';
+// import { itemData } from '../data/data';
 import AppsIcon from '@mui/icons-material/Apps';
 import TableRowsIcon from '@mui/icons-material/TableRows';
 import TuneIcon from '@mui/icons-material/Tune';
@@ -15,8 +15,9 @@ import { chgOnSm, chgOnVal } from '../utility/screenSize';
 import './css/Shop.css';
 
 export default function Shop() {
-    const { screenW } = useContextData();
+    const { appData, screenW } = useContextData();
     const { details } = useParams();
+    const itemData = appData.storeData
     const [orgSort, setOrgSort] = useState<SelectSortOptions>('featured');
     const [orgLayout, setOrgLayout] = useState<"tile"|"row">("tile");
     const [filterForm, setFilterForm] = useState<FilterForm>({
@@ -26,6 +27,7 @@ export default function Shop() {
         priceMax: undefined,
         sales: false,
     });
+
     const selectedItem = itemData.find((item)=> item.alias === details);
 
     let itemDataFiltered: StoreItem[] = itemData.filter((item) => {
@@ -36,7 +38,6 @@ export default function Shop() {
         if (isRemedy === true && isForm === true && isPrice === true && isSale === true) { return item }
     });
     const itemDataFilteredNoSort: StoreItem[] = [...itemDataFiltered]
-
 
     switch(orgSort) {
         case 'featured':
@@ -115,13 +116,18 @@ export default function Shop() {
                     </div>
                 </div>
                 <div className='shp_display_org_hr'></div>
-
-                <div className={(orgLayout === 'tile' || screenW <= 600) ? 'shp_display_tile' : 'shp_display_row'}>
-                    { itemDataFiltered.map((item) => {
-                        if (orgLayout === "tile" || screenW <= 600) {return <DisplayItemTile key={item.alias} item={item} />}
-                        else if (orgLayout === "row") {return <DisplayItemRow key={item.alias} item={item} />}
-                    }) }
-                </div>
+                { itemData.length === 0 ?
+                    <div className="shp_api_loading">
+                        <div>loading...</div>
+                    </div>
+                    :
+                    <div className={(orgLayout === 'tile' || screenW <= 600) ? 'shp_display_tile' : 'shp_display_row'}>
+                        { itemData && itemDataFiltered.map((item) => {
+                            if (orgLayout === "tile" || screenW <= 600) {return <DisplayItemTile key={item.alias} item={item} />}
+                            else if (orgLayout === "row") {return <DisplayItemRow key={item.alias} item={item} />}
+                        }) }
+                    </div>
+                }
             </div>
 
             <div className='shp_cart'>

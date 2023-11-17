@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { StoreItem } from '../../interface/interfaces';
 import { useContextData } from '../../context/context';
+import itemImg from '../../images/itemImageIndex';
 import Stars from '../Stars/Stars';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import './DisplayItemRow.css';
@@ -31,7 +32,7 @@ export default function DisplayItemRow({item}: Props) {
     return (
         <div className="shp_row" key={item.name} >
             { item.sale !== false && <div className='shp_row_sale_tag'>-{Math.round((1 - item.sale) * 100)}%</div>}
-            <img className="shp_row_img" src={item.image} alt={item.name} />
+            <img className="shp_row_img" src={itemImg[item.image]} alt={item.name} />
             <div className="shp_row_details_cont">
                 <div className="shp_row_header">
                     <div className="shp_row_title">{item.name}</div>

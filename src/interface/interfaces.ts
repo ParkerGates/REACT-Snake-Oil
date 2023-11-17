@@ -21,6 +21,7 @@ interface CartItem  {
 interface AppContext {
     cart: CartItem[];
     checkoutStage: 'cart'|'checkout' | 'complete';
+    storeData: StoreItem[];
 }
 
 interface FilterForm {

@@ -2,6 +2,7 @@ import React from 'react';
 import { useContextData } from '../../context/context';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp'; import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'; import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import itemImg from '../../images/itemImageIndex';
 import './Cart.css';
 
 export default function Cart() {
@@ -25,7 +26,7 @@ export default function Cart() {
                     return (
                         <div key={cartItem.item.alias}>
                             <div className='cart_item'>
-                                <img className='cart_item_img' src={cartItem.item.image} alt={cartItem.item.alias} />
+                                <img className='cart_item_img' src={itemImg[cartItem.item.image]} alt={cartItem.item.alias} />
                                 <div className='cart_item_info'>
                                     <div className='cart_item_name'>{cartItem.item.name}</div>
                                     <span>
