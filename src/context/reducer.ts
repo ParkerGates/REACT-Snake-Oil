@@ -1,5 +1,4 @@
 import { AppContext, CartItem, StoreItem } from "../interface/interfaces";
-import { testCartData } from "../data/data";
 
 interface Action {
     type: string;
@@ -8,11 +7,13 @@ interface Action {
     itemIndex?: Number;
     increment?: 1 | -1;
     checkoutStage?: 'cart' | 'checkout' | 'complete';
+    newStoreData?: StoreItem[]
 }
 
 const initialState: AppContext = {
-    cart: testCartData,
+    cart: [],
     checkoutStage: 'cart',
+    storeData: []
 }
 
 let newState: AppContext;
@@ -22,6 +23,11 @@ let itemIndex: Number;
 
 const reducer = (state:AppContext, action: Action) => {
     switch(action.type) {
+        //newStoreData: StoreItem[]
+        case 'mountStoreData':
+            newState = {...state, storeData: action.newStoreData}
+            return newState;
+
         case "addToCart":
             //storeItem: StoreItem
             newState = {...state, checkoutStage:'cart'};

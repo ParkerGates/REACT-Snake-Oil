@@ -1,5 +1,5 @@
 .filter_cont {
-    padding: 2rem 2rem 1rem;
+    padding: 1.8rem 1.8rem 1rem;
     height: calc(100vh - 6.3rem);
     overflow-y: scroll;
 }
@@ -40,7 +40,7 @@
     display: flex;
     justify-content: space-between;
     width: 10.9rem;
-    margin: .5rem 1px 0px 5px;
+    margin: .5rem 1px .5rem 5px;
 }
 .filter_price_btn_cont button {
     width: calc(100% - 20px);
@@ -60,11 +60,11 @@
     margin: 0px 0px .8rem .5rem;
 }
 .filter_checkbox_name {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 300;
 }
 
-.filter_price_checkbox {
+.filter_price_ {
     margin-top: 1rem;
 }
 

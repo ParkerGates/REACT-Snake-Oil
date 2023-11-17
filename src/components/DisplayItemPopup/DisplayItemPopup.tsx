@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { useContextData } from '../../context/context';
 import { StoreItem } from '../../interface/interfaces';
+import itemImg from '../../images/itemImageIndex';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Stars from '../Stars/Stars';
 import './DisplayItemPopup.css';
@@ -38,7 +39,7 @@ export default function DisplayItemPopup({item}: Props) {
             <div className='shp_popup'>
             { item.sale !== false && <div className='shp_popup_sale_tag'>-{Math.round((1 - item.sale) * 100)}%</div>}
                 <div className='shp_popup_img_sec'>
-                    <img className='shp_popup_img' src={item.image} alt={item.alias} />
+                    <img className='shp_popup_img' src={itemImg[item.image]} alt={item.alias} />
                     <div className='shp_popup_img_legalese'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                 </div>
                 <div className='shp_popup_details_sec'>

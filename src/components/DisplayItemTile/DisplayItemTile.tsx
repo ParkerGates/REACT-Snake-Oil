@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { StoreItem } from '../../interface/interfaces';
 import { Link, useNavigate } from 'react-router-dom';
 import { useContextData } from '../../context/context';
+import itemImg from '../../images/itemImageIndex';
 import Stars from '../Stars/Stars';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import './DisplayItemTile.css';
@@ -34,7 +35,7 @@ export default function DisplayItemTile({item}: Props) {
         <div className='shp_tile' key={item.name}>
             { item.sale !== false && <div className='shp_tile_sale_tag'>-{Math.round((1 - item.sale) * 100)}%</div>}
             <div className='shp_tile_img_cont'>
-                <img className="shp_tile_img" src={item.image} alt={item.name} />
+                <img className="shp_tile_img" src={itemImg[item.image]} alt={item.name} />
                 <div className='shp_tile_interaction' onClick={(e)=>{e.target === e.currentTarget && navigate('/shop/'+item.alias)}}>
                     {   lastAdded?.alias !== item.alias ?
                         <button className="shp_tile_interaction_cart" onClick={()=>{addToCart(item)}}>

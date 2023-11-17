@@ -2,6 +2,11 @@
     position: relative;
     height: calc(100vh - 3.2rem);
 }
+.checkout input {
+    background-color: rgba(255, 255, 255, 0.247);
+    border: 1px solid gray;
+    border-radius: .1rem;
+}
 .checkout_header {
     display: flex;
     justify-content: space-between;

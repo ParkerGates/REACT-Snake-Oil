@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import axios from 'axios';
 import Grid1 from '../svgs/grid1.svg';
 import Grid2 from '../svgs/grid2.svg';
 import './css/About.css';
