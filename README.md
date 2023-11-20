@@ -9,13 +9,13 @@ A store page that specializes in selling questionable, sketchy & most likely dub
 
 
 ## How To Start
-`npm install`
+- `npm install`
 
 Start api in terminal 1: (on port: 4000, which should occur by default)
-`npm run serve-json`
+- `npm run serve-json`
 
 Start app in terminal 2:
-`npm start`
+- `npm start`
 
 
 ## What Is Asp - Snake Oil
