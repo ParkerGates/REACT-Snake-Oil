@@ -7,7 +7,7 @@
             "stars": 5,
             "image": "creamGreen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "daily",
             "form": "creams",
             "sale": false
@@ -19,7 +19,7 @@
             "stars": 5,
             "image": "oilGreen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "miracle",
             "form": "oils",
             "sale": false
@@ -31,7 +31,7 @@
             "stars": 4.5,
             "image": "dropPlate",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "natural",
             "form": "drops",
             "sale": false
@@ -43,7 +43,7 @@
             "stars": 4,
             "image": "dropBasket",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "daily",
             "form": "drops",
             "sale": false
@@ -55,7 +55,7 @@
             "stars": 4,
             "image": "soapGreen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "miracle",
             "form": "rubs",
             "sale": false
@@ -67,7 +67,7 @@
             "stars": 4.5,
             "image": "dropPlant",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "miracle",
             "form": "drops",
             "sale": 0.8
@@ -79,7 +79,7 @@
             "stars": 4.5,
             "image": "oilBlue",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "daily",
             "form": "oils",
             "sale": false
@@ -91,7 +91,7 @@
             "stars": 5,
             "image": "creamPink",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "natural",
             "form": "creams",
             "sale": 0.9
@@ -103,7 +103,7 @@
             "stars": 4,
             "image": "dropPink",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "natural",
             "form": "drops",
             "sale": false
@@ -115,7 +115,7 @@
             "stars": 4,
             "image": "oilLavender",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "natural",
             "form": "oils",
             "sale": false
@@ -127,7 +127,7 @@
             "stars": 3.5,
             "image": "oilOrange",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "natural",
             "form": "oils",
             "sale": false
@@ -139,7 +139,7 @@
             "stars": 5,
             "image": "oilPurple",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "daily",
             "form": "oils",
             "sale": 0.75
@@ -151,7 +151,7 @@
             "stars": 5,
             "image": "oilWhite",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "natural",
             "form": "oils",
             "sale": false
@@ -163,7 +163,7 @@
             "stars": 5,
             "image": "oilYellow",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "daily",
             "form": "oils",
             "sale": false
@@ -175,7 +175,7 @@
             "stars": 4.5,
             "image": "pillColor",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "natural",
             "form": "pills",
             "sale": 0.8
@@ -187,7 +187,7 @@
             "stars": 5,
             "image": "pillFruit",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "miracle",
             "form": "pills",
             "sale": false
@@ -199,7 +199,7 @@
             "stars": 4.5,
             "image": "pillGreen",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "miracle",
             "form": "pills",
             "sale": 0.7
@@ -211,7 +211,7 @@
             "stars": 5,
             "image": "pillYellow",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "daily",
             "form": "pills",
             "sale": false
@@ -223,7 +223,7 @@
             "stars": 5,
             "image": "powderBrown",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "natural",
             "form": "powders",
             "sale": 0.9
@@ -235,7 +235,7 @@
             "stars": 4.5,
             "image": "powderOrange",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "daily",
             "form": "powders",
             "sale": false
@@ -247,7 +247,7 @@
             "stars": 3.5,
             "image": "powderRed",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "miracle",
             "form": "powders",
             "sale": 0.8
@@ -259,7 +259,7 @@
             "stars": 4,
             "image": "soapBrown",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "daily",
             "form": "rubs",
             "sale": false
@@ -271,7 +271,7 @@
             "stars": 3.5,
             "image": "soapPink",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-            "details": ["aaa","bbb","ccc"],
+            "details": ["FDA compliant","100% effecitve","Derived from the purest sources"],
             "remedy": "natural",
             "form": "rubs",
             "sale": false
