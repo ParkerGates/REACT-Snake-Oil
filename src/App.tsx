@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './views/Home';
 import About from './views/About';
 import Shop from './views/Shop';
+import Snake from './views/Snake';
 import './App.css';
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/shop/:details?" element={<Shop />} />
+        <Route path='/snake' element={<Snake />} />
       </Routes>
     </BrowserRouter>
     </div>
