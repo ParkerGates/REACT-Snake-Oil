@@ -19,7 +19,7 @@ export default function Footer() {
                 <Link to='/' className='footer_link'>Home</Link>
                 <Link to='/about' className='footer_link'>About</Link>
                 <Link to='/shop' className='footer_link'>Shop</Link>
-                <Link to='/snake' className='footer_link'>Snake</Link>
+                <Link to='/shop' className='footer_link'>Snake</Link>
             </div>
             <div className='footer_resume_project'>
                 <span>2023 Parker Gates | Resume Project</span>

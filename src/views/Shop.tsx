@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useContextData } from '../context/context';
 import { FilterForm, SelectSortOptions, StoreItem } from '../interface/interfaces';
 import { useParams } from 'react-router-dom';
-// import { itemData } from '../data/data';
 import AppsIcon from '@mui/icons-material/Apps';
 import TableRowsIcon from '@mui/icons-material/TableRows';
 import TuneIcon from '@mui/icons-material/Tune';
@@ -39,6 +38,9 @@ export default function Shop() {
     });
     const itemDataFilteredNoSort: StoreItem[] = [...itemDataFiltered]
 
+
+    let priceA;
+    let priceB;
     switch(orgSort) {
         case 'featured':
             itemDataFiltered = itemDataFilteredNoSort;
@@ -50,10 +52,18 @@ export default function Shop() {
             itemDataFiltered.sort((a,b)=> (b.stars - a.stars));
             break;
         case 'priceLow':
-            itemDataFiltered.sort((a,b)=> (a.price - b.price));
+            itemDataFiltered.sort((a,b)=> {
+                priceA = a.sale === false ? a.price : Math.round(100 * (a.price * a.sale)) / 100
+                priceB = b.sale === false ? b.price : Math.round(100 * (b.price * b.sale)) / 100
+                return (priceA - priceB);
+            });
             break;
         case 'priceHigh':
-            itemDataFiltered.sort((a,b)=> (b.price - a.price));
+            itemDataFiltered.sort((a,b)=> {
+                priceA = a.sale === false ? a.price : Math.round(100 * (a.price * a.sale)) / 100
+                priceB = b.sale === false ? b.price : Math.round(100 * (b.price * b.sale)) / 100
+                return (priceB - priceA)
+            });
             break;
         default:
             itemDataFiltered = itemDataFilteredNoSort;
